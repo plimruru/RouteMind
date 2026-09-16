@@ -83,17 +83,65 @@ CMakeFiles/route_planner.dir/cpp/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/route_planner.dir/cpp/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mixtaper/my_projects/RouteMind/cpp/src/main.cpp -o CMakeFiles/route_planner.dir/cpp/src/main.cpp.s
 
+CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o: CMakeFiles/route_planner.dir/flags.make
+CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o: /home/mixtaper/my_projects/RouteMind/cpp/src/planner/Planner.cpp
+CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o: CMakeFiles/route_planner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mixtaper/my_projects/RouteMind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o -MF CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o.d -o CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o -c /home/mixtaper/my_projects/RouteMind/cpp/src/planner/Planner.cpp
+
+CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mixtaper/my_projects/RouteMind/cpp/src/planner/Planner.cpp > CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.i
+
+CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mixtaper/my_projects/RouteMind/cpp/src/planner/Planner.cpp -o CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.s
+
+CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o: CMakeFiles/route_planner.dir/flags.make
+CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o: /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonLoader.cpp
+CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o: CMakeFiles/route_planner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mixtaper/my_projects/RouteMind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o -MF CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o.d -o CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o -c /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonLoader.cpp
+
+CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonLoader.cpp > CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.i
+
+CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonLoader.cpp -o CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.s
+
+CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o: CMakeFiles/route_planner.dir/flags.make
+CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o: /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonWriter.cpp
+CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o: CMakeFiles/route_planner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mixtaper/my_projects/RouteMind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o -MF CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o.d -o CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o -c /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonWriter.cpp
+
+CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonWriter.cpp > CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.i
+
+CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mixtaper/my_projects/RouteMind/cpp/src/io/JsonWriter.cpp -o CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.s
+
 # Object files for target route_planner
 route_planner_OBJECTS = \
-"CMakeFiles/route_planner.dir/cpp/src/main.cpp.o"
+"CMakeFiles/route_planner.dir/cpp/src/main.cpp.o" \
+"CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o" \
+"CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o" \
+"CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o"
 
 # External object files for target route_planner
 route_planner_EXTERNAL_OBJECTS =
 
 route_planner: CMakeFiles/route_planner.dir/cpp/src/main.cpp.o
+route_planner: CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o
+route_planner: CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o
+route_planner: CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o
 route_planner: CMakeFiles/route_planner.dir/build.make
 route_planner: CMakeFiles/route_planner.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mixtaper/my_projects/RouteMind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable route_planner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mixtaper/my_projects/RouteMind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable route_planner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/route_planner.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -129,6 +129,54 @@ route_planner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/build
 .PHONY : route_planner/fast
 
+cpp/src/io/JsonLoader.o: cpp/src/io/JsonLoader.cpp.o
+.PHONY : cpp/src/io/JsonLoader.o
+
+# target to build an object file
+cpp/src/io/JsonLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.o
+.PHONY : cpp/src/io/JsonLoader.cpp.o
+
+cpp/src/io/JsonLoader.i: cpp/src/io/JsonLoader.cpp.i
+.PHONY : cpp/src/io/JsonLoader.i
+
+# target to preprocess a source file
+cpp/src/io/JsonLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.i
+.PHONY : cpp/src/io/JsonLoader.cpp.i
+
+cpp/src/io/JsonLoader.s: cpp/src/io/JsonLoader.cpp.s
+.PHONY : cpp/src/io/JsonLoader.s
+
+# target to generate assembly for a file
+cpp/src/io/JsonLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/io/JsonLoader.cpp.s
+.PHONY : cpp/src/io/JsonLoader.cpp.s
+
+cpp/src/io/JsonWriter.o: cpp/src/io/JsonWriter.cpp.o
+.PHONY : cpp/src/io/JsonWriter.o
+
+# target to build an object file
+cpp/src/io/JsonWriter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.o
+.PHONY : cpp/src/io/JsonWriter.cpp.o
+
+cpp/src/io/JsonWriter.i: cpp/src/io/JsonWriter.cpp.i
+.PHONY : cpp/src/io/JsonWriter.i
+
+# target to preprocess a source file
+cpp/src/io/JsonWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.i
+.PHONY : cpp/src/io/JsonWriter.cpp.i
+
+cpp/src/io/JsonWriter.s: cpp/src/io/JsonWriter.cpp.s
+.PHONY : cpp/src/io/JsonWriter.s
+
+# target to generate assembly for a file
+cpp/src/io/JsonWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/io/JsonWriter.cpp.s
+.PHONY : cpp/src/io/JsonWriter.cpp.s
+
 cpp/src/main.o: cpp/src/main.cpp.o
 .PHONY : cpp/src/main.o
 
@@ -153,6 +201,30 @@ cpp/src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/main.cpp.s
 .PHONY : cpp/src/main.cpp.s
 
+cpp/src/planner/Planner.o: cpp/src/planner/Planner.cpp.o
+.PHONY : cpp/src/planner/Planner.o
+
+# target to build an object file
+cpp/src/planner/Planner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.o
+.PHONY : cpp/src/planner/Planner.cpp.o
+
+cpp/src/planner/Planner.i: cpp/src/planner/Planner.cpp.i
+.PHONY : cpp/src/planner/Planner.i
+
+# target to preprocess a source file
+cpp/src/planner/Planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.i
+.PHONY : cpp/src/planner/Planner.cpp.i
+
+cpp/src/planner/Planner.s: cpp/src/planner/Planner.cpp.s
+.PHONY : cpp/src/planner/Planner.s
+
+# target to generate assembly for a file
+cpp/src/planner/Planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.s
+.PHONY : cpp/src/planner/Planner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... route_planner"
+	@echo "... cpp/src/io/JsonLoader.o"
+	@echo "... cpp/src/io/JsonLoader.i"
+	@echo "... cpp/src/io/JsonLoader.s"
+	@echo "... cpp/src/io/JsonWriter.o"
+	@echo "... cpp/src/io/JsonWriter.i"
+	@echo "... cpp/src/io/JsonWriter.s"
 	@echo "... cpp/src/main.o"
 	@echo "... cpp/src/main.i"
 	@echo "... cpp/src/main.s"
+	@echo "... cpp/src/planner/Planner.o"
+	@echo "... cpp/src/planner/Planner.i"
+	@echo "... cpp/src/planner/Planner.s"
 .PHONY : help
 
 

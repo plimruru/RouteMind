@@ -1,0 +1,3 @@
+/home/mixtaper/my_projects/RouteMind/build/CMakeFiles/route_planner.dir
+/home/mixtaper/my_projects/RouteMind/build/CMakeFiles/edit_cache.dir
+/home/mixtaper/my_projects/RouteMind/build/CMakeFiles/rebuild_cache.dir

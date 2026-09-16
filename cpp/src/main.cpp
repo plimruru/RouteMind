@@ -1,26 +1,79 @@
+#include <iostream>
+
 #include "planner/Planner.h"
-#include "../include/io/JsonLoader.h"
-#include "../include/io/JsonWriter.h"
-#include "../include/model/Request.h"
-#include "../include/model/Engineer.h"
+#include "io/JsonLoader.h"
+#include "io/JsonWriter.h"
 
 int main() {
 
-    auto requests =
-        JsonLoader::loadRequests("data/requests.json");
+    try {
 
-    auto engineers =
-        JsonLoader::loadEngineers("data/engineers.json");
+        std::cout << "Starting planner...\n";
 
-    Planner planner;
+        auto requests =
+            JsonLoader::loadRequests(
+                "data/requests.json"
+            );
 
-    Plan plan =
-        planner.solve(requests, engineers);
+        std::cout
+            << "Loaded requests: "
+            << requests.size()
+            << "\n";
 
-    JsonWriter::writePlan(
-        plan,
-        "output/plan.json"
-    );
+
+        auto engineers =
+            JsonLoader::loadEngineers(
+                "data/engineers.json"
+            );
+
+        std::cout
+            << "Loaded engineers: "
+            << engineers.size()
+            << "\n";
+
+
+        Planner planner;
+
+        Plan plan =
+            planner.solve(
+                requests,
+                engineers
+            );
+
+
+        std::cout
+            << "Plan created.\n";
+
+        std::cout
+            << "Routes: "
+            << plan.routes.size()
+            << "\n";
+
+        std::cout
+            << "Unassigned requests: "
+            << plan.unassigned.size()
+            << "\n";
+
+
+        JsonWriter::writePlan(
+            plan,
+            "output/plan.json"
+        );
+
+        std::cout
+            << "Plan written to output/plan.json\n";
+
+
+    }
+    catch (const std::exception& e) {
+
+        std::cerr
+            << "ERROR: "
+            << e.what()
+            << "\n";
+
+        return 1;
+    }
 
     return 0;
 }

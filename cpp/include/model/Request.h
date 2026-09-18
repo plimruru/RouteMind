@@ -7,7 +7,7 @@
 #include <string>
 
 struct Request {
-    int id;
+    std::string id;
 
     Point location;
 

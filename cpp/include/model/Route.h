@@ -1,9 +1,10 @@
 #pragma once
 
+#include <string>
 #include <vector>
 
 struct ScheduledRequest {
-    int requestId;
+    std::string requestId;
 
     int arrivalTime;
     int startTime;
@@ -13,7 +14,7 @@ struct ScheduledRequest {
 };
 
 struct Route {
-    int engineerId;
+    std::string engineerId;
 
     std::vector<ScheduledRequest> requests;
 

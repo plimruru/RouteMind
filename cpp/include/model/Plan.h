@@ -6,7 +6,7 @@
 #include <vector>
 
 struct UnassignedRequest {
-    int requestId;
+    std::string requestId;
     std::string reason;
 };
 

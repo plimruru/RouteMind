@@ -5,10 +5,9 @@
 
 #include <string>
 #include <vector>
-#include <string>
 
 struct Engineer {
-    int id;
+    std::string id;
 
     std::string name;
 
@@ -19,10 +18,12 @@ struct Engineer {
 
     std::vector<Skill> skills;
 
+    std::vector<std::string> specializations;
+
     Transport transport;
 
     std::string region;
     std::string homeDistrict;
     std::vector<std::string> servedDistricts;
-    std::vector<std::string> specializations;
+
 };

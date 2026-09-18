@@ -3,6 +3,7 @@
 #include "Request.h"
 
 #include <optional>
+#include <string>
 
 enum class EventType {
     UrgentRequest,
@@ -10,13 +11,19 @@ enum class EventType {
     EngineerUnavailable
 };
 
+
 struct Event {
+
     EventType type;
 
     int time;
 
-    std::optional<int> requestId;
-    std::optional<int> engineerId;
+    std::optional<std::string>
+        requestId;
 
-    std::optional<Request> newRequest;
+    std::optional<std::string>
+        engineerId;
+
+    std::optional<Request>
+        newRequest;
 };

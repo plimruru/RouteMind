@@ -23,7 +23,7 @@ int main() {
 
         auto engineers =
             JsonLoader::loadEngineers(
-                "data/engineers.json"
+                "data/brigades.json"
             );
 
         std::cout

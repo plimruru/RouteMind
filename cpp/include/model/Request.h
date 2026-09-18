@@ -4,6 +4,7 @@
 #include "Enums.h"
 
 #include <optional>
+#include <string>
 
 struct Request {
     int id;
@@ -20,4 +21,9 @@ struct Request {
     Skill requiredSkill;
 
     std::optional<Transport> requiredTransport;
+
+    std::string region;
+    std::string district;
+    std::string address;
+    std::string requiredSpecialization;
 };

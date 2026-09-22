@@ -18,6 +18,11 @@ add_executable(route_planner
     cpp/src/main.cpp
 
     cpp/src/planner/Planner.cpp
+    cpp/src/planner/Scheduler.cpp
+
+    cpp/src/routing/Router.cpp
+
+    cpp/src/metrics/Metrics.cpp
 
     cpp/src/io/JsonLoader.cpp
     cpp/src/io/JsonWriter.cpp

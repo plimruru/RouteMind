@@ -20,6 +20,15 @@ int main() {
             << requests.size()
             << "\n";
 
+        if (!requests.empty()) {
+
+            std::cout
+                << "First request location: "
+                << requests.front().location.lat
+                << ", "
+                << requests.front().location.lon
+                << "\n";
+        }
 
         auto engineers =
             JsonLoader::loadEngineers(
@@ -42,7 +51,7 @@ int main() {
 
 
         std::cout
-            << "Plan created.\n";
+            << "\nPlan created.\n";
 
         std::cout
             << "Routes: "
@@ -55,13 +64,34 @@ int main() {
             << "\n";
 
 
+        std::cout
+            << "\nMetrics:\n";
+
+        std::cout
+            << "Engineers used: "
+            << plan.metrics.engineersUsed
+            << "\n";
+
+        std::cout
+            << "Total distance: "
+            << plan.metrics.totalDistanceKm
+            << " km\n";
+
+
+        std::cout
+            << "\nExplanations: "
+            << plan.explanations.size()
+            << "\n";
+
+
         JsonWriter::writePlan(
             plan,
             "output/plan.json"
         );
 
         std::cout
-            << "Plan written to output/plan.json\n";
+            << "\nPlan written to "
+               "output/plan.json\n";
 
 
     }

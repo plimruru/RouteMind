@@ -201,6 +201,30 @@ cpp/src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/main.cpp.s
 .PHONY : cpp/src/main.cpp.s
 
+cpp/src/metrics/Metrics.o: cpp/src/metrics/Metrics.cpp.o
+.PHONY : cpp/src/metrics/Metrics.o
+
+# target to build an object file
+cpp/src/metrics/Metrics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/metrics/Metrics.cpp.o
+.PHONY : cpp/src/metrics/Metrics.cpp.o
+
+cpp/src/metrics/Metrics.i: cpp/src/metrics/Metrics.cpp.i
+.PHONY : cpp/src/metrics/Metrics.i
+
+# target to preprocess a source file
+cpp/src/metrics/Metrics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/metrics/Metrics.cpp.i
+.PHONY : cpp/src/metrics/Metrics.cpp.i
+
+cpp/src/metrics/Metrics.s: cpp/src/metrics/Metrics.cpp.s
+.PHONY : cpp/src/metrics/Metrics.s
+
+# target to generate assembly for a file
+cpp/src/metrics/Metrics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/metrics/Metrics.cpp.s
+.PHONY : cpp/src/metrics/Metrics.cpp.s
+
 cpp/src/planner/Planner.o: cpp/src/planner/Planner.cpp.o
 .PHONY : cpp/src/planner/Planner.o
 
@@ -225,6 +249,54 @@ cpp/src/planner/Planner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.s
 .PHONY : cpp/src/planner/Planner.cpp.s
 
+cpp/src/planner/Scheduler.o: cpp/src/planner/Scheduler.cpp.o
+.PHONY : cpp/src/planner/Scheduler.o
+
+# target to build an object file
+cpp/src/planner/Scheduler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Scheduler.cpp.o
+.PHONY : cpp/src/planner/Scheduler.cpp.o
+
+cpp/src/planner/Scheduler.i: cpp/src/planner/Scheduler.cpp.i
+.PHONY : cpp/src/planner/Scheduler.i
+
+# target to preprocess a source file
+cpp/src/planner/Scheduler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Scheduler.cpp.i
+.PHONY : cpp/src/planner/Scheduler.cpp.i
+
+cpp/src/planner/Scheduler.s: cpp/src/planner/Scheduler.cpp.s
+.PHONY : cpp/src/planner/Scheduler.s
+
+# target to generate assembly for a file
+cpp/src/planner/Scheduler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Scheduler.cpp.s
+.PHONY : cpp/src/planner/Scheduler.cpp.s
+
+cpp/src/routing/Router.o: cpp/src/routing/Router.cpp.o
+.PHONY : cpp/src/routing/Router.o
+
+# target to build an object file
+cpp/src/routing/Router.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/routing/Router.cpp.o
+.PHONY : cpp/src/routing/Router.cpp.o
+
+cpp/src/routing/Router.i: cpp/src/routing/Router.cpp.i
+.PHONY : cpp/src/routing/Router.i
+
+# target to preprocess a source file
+cpp/src/routing/Router.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/routing/Router.cpp.i
+.PHONY : cpp/src/routing/Router.cpp.i
+
+cpp/src/routing/Router.s: cpp/src/routing/Router.cpp.s
+.PHONY : cpp/src/routing/Router.s
+
+# target to generate assembly for a file
+cpp/src/routing/Router.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/routing/Router.cpp.s
+.PHONY : cpp/src/routing/Router.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,9 +315,18 @@ help:
 	@echo "... cpp/src/main.o"
 	@echo "... cpp/src/main.i"
 	@echo "... cpp/src/main.s"
+	@echo "... cpp/src/metrics/Metrics.o"
+	@echo "... cpp/src/metrics/Metrics.i"
+	@echo "... cpp/src/metrics/Metrics.s"
 	@echo "... cpp/src/planner/Planner.o"
 	@echo "... cpp/src/planner/Planner.i"
 	@echo "... cpp/src/planner/Planner.s"
+	@echo "... cpp/src/planner/Scheduler.o"
+	@echo "... cpp/src/planner/Scheduler.i"
+	@echo "... cpp/src/planner/Scheduler.s"
+	@echo "... cpp/src/routing/Router.o"
+	@echo "... cpp/src/routing/Router.i"
+	@echo "... cpp/src/routing/Router.s"
 .PHONY : help
 
 

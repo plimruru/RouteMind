@@ -1,5 +1,9 @@
 #include "planner/Planner.h"
 
+#include "metrics/Metrics.h"
+#include "planner/Scheduler.h"
+#include "routing/Router.h"
+
 #include <algorithm>
 #include <cmath>
 #include <string>
@@ -63,56 +67,6 @@ bool transportMatches(
            request.requiredTransport.value();
 }
 
-
-// ------------------------------------------------------------
-// Простая оценка времени поездки
-// ------------------------------------------------------------
-
-int travelTimeMinutes(
-    const Point& from,
-    const Point& to
-) {
-    const double dx =
-        from.lat - to.lat;
-
-    const double dy =
-        from.lon - to.lon;
-
-    const double distance =
-        std::sqrt(
-            dx * dx +
-            dy * dy
-        );
-
-    // Пока это очень грубая оценка.
-    // Настоящий routing подключим позже.
-    return static_cast<int>(
-        std::ceil(distance * 60.0)
-    );
-}
-
-
-// ------------------------------------------------------------
-// Простая оценка расстояния
-// ------------------------------------------------------------
-
-double distanceKm(
-    const Point& from,
-    const Point& to
-) {
-    const double dx =
-        from.lat - to.lat;
-
-    const double dy =
-        from.lon - to.lon;
-
-    return std::sqrt(
-        dx * dx +
-        dy * dy
-    );
-}
-
-
 // ------------------------------------------------------------
 // Внутреннее состояние маршрута
 // ------------------------------------------------------------
@@ -135,7 +89,6 @@ struct WorkingRoute {
     std::vector<ScheduledRequest> requests;
 };
 
-
 // ------------------------------------------------------------
 // Можно ли назначить заявку на маршрут
 // ------------------------------------------------------------
@@ -147,8 +100,6 @@ bool canAssign(
     const Engineer& engineer =
         *route.engineer;
 
-
-    // 1. Проверяем skill
     if (!hasSkill(
             engineer,
             request.requiredSkill)) {
@@ -156,8 +107,6 @@ bool canAssign(
         return false;
     }
 
-
-    // 2. Проверяем specialization
     if (!hasSpecialization(
             engineer,
             request.requiredSpecialization)) {
@@ -165,8 +114,6 @@ bool canAssign(
         return false;
     }
 
-
-    // 3. Проверяем транспорт
     if (!transportMatches(
             engineer,
             request)) {
@@ -174,49 +121,8 @@ bool canAssign(
         return false;
     }
 
-
-    // 4. Считаем время поездки
-    const int travel =
-        travelTimeMinutes(
-            route.currentLocation,
-            request.location
-        );
-
-
-    // 5. Время прибытия
-    const int arrival =
-        route.currentTime + travel;
-
-
-    // 6. Если приехали раньше начала окна,
-    // придется подождать.
-    const int start =
-        std::max(
-            arrival,
-            request.windowStart
-        );
-
-
-    // 7. Время окончания работы
-    const int finish =
-        start + request.durationMinutes;
-
-
-    // 8. Не успеваем в окно заявки
-    if (start > request.windowEnd) {
-        return false;
-    }
-
-
-    // 9. Не успеваем закончить до конца смены
-    if (finish > engineer.shiftEnd) {
-        return false;
-    }
-
-
     return true;
 }
-
 
 // ------------------------------------------------------------
 // Назначение заявки
@@ -224,73 +130,42 @@ bool canAssign(
 
 void assignRequest(
     const Request& request,
-    WorkingRoute& route
+    WorkingRoute& route,
+    const ScheduleResult& schedule
 ) {
-    const int travel =
-        travelTimeMinutes(
-            route.currentLocation,
-            request.location
-        );
-
-
-    const int arrival =
-        route.currentTime + travel;
-
-
-    const int start =
-        std::max(
-            arrival,
-            request.windowStart
-        );
-
-
-    const int finish =
-        start + request.durationMinutes;
-
-
-    const double distance =
-        distanceKm(
-            route.currentLocation,
-            request.location
-        );
-
-
     ScheduledRequest scheduled;
 
     scheduled.requestId =
         request.id;
 
     scheduled.arrivalTime =
-        arrival;
+        schedule.arrivalTime;
 
     scheduled.startTime =
-        start;
+        schedule.startTime;
 
     scheduled.finishTime =
-        finish;
+        schedule.finishTime;
 
     scheduled.distanceFromPreviousKm =
-        distance;
-
+        schedule.distanceFromPreviousKm;
 
     route.requests.push_back(
         scheduled
     );
 
-
     route.currentLocation =
         request.location;
 
     route.currentTime =
-        finish;
+        schedule.finishTime;
 
     route.totalDistanceKm +=
-        distance;
+        schedule.distanceFromPreviousKm;
 
     route.totalTravelMinutes +=
-        travel;
+        schedule.travelMinutes;
 }
-
 
 // ------------------------------------------------------------
 // Причина, почему заявку не удалось назначить
@@ -390,12 +265,48 @@ Plan Planner::solve(
         );
     }
 
+    Router router;
+    Scheduler scheduler;
 
     // Идем по заявкам
     for (const auto& request : requests) {
 
-        bool assigned = false;
+        if (!request.hasLocation) {
 
+            UnassignedRequest unassigned;
+
+            unassigned.requestId =
+                request.id;
+
+            unassigned.reason =
+                "Missing geolocation";
+
+            plan.unassigned.push_back(
+                unassigned
+            );
+
+            RequestExplanation explanation;
+
+            explanation.requestId =
+                request.id;
+
+            explanation.assigned = false;
+
+            explanation.engineerId =
+                "";
+
+            explanation.reasons.push_back(
+                "Missing geolocation"
+            );
+
+            plan.explanations.push_back(
+                explanation
+            );
+
+            continue;
+        }
+
+        bool assigned = false;
 
         // Ищем первую подходящую бригаду
         for (auto& route : workingRoutes) {
@@ -407,12 +318,62 @@ Plan Planner::solve(
                 continue;
             }
 
+            ScheduleResult schedule =
+                scheduler.schedule(
+                    route.currentLocation,
+                    *route.engineer,
+                    request,
+                    route.currentTime,
+                    router
+                );
+
+            if (!schedule.feasible) {
+                continue;
+            }
 
             assignRequest(
                 request,
-                route
+                route,
+                schedule
             );
 
+            RequestExplanation explanation;
+
+            explanation.requestId =
+                request.id;
+
+            explanation.assigned = true;
+
+            explanation.engineerId =
+                route.engineer->id;
+
+            explanation.reasons.push_back(
+                "Required skill is available"
+            );
+
+            if (!request.requiredSpecialization.empty()) {
+                explanation.reasons.push_back(
+                    "Required specialization is available"
+                );
+            }
+
+            if (request.requiredTransport.has_value()) {
+                explanation.reasons.push_back(
+                    "Required transport is available"
+                );
+            }
+
+            explanation.reasons.push_back(
+                "Time window is satisfied"
+            );
+
+            explanation.reasons.push_back(
+                "Engineer shift is sufficient"
+            );
+
+            plan.explanations.push_back(
+                explanation
+            );
 
             assigned = true;
 
@@ -423,21 +384,41 @@ Plan Planner::solve(
         // Если подходящей бригады нет
         if (!assigned) {
 
-            UnassignedRequest
-                unassigned;
-
-            unassigned.requestId =
-                request.id;
-
-            unassigned.reason =
+            const std::string reason =
                 unassignedReason(
                     request,
                     engineers
                 );
 
+            UnassignedRequest unassigned;
+
+            unassigned.requestId =
+                request.id;
+
+            unassigned.reason =
+                reason;
 
             plan.unassigned.push_back(
                 unassigned
+            );
+
+
+            RequestExplanation explanation;
+
+            explanation.requestId =
+                request.id;
+
+            explanation.assigned = false;
+
+            explanation.engineerId =
+                "";
+
+            explanation.reasons.push_back(
+                reason
+            );
+
+            plan.explanations.push_back(
+                explanation
             );
         }
     }
@@ -479,23 +460,7 @@ Plan Planner::solve(
 
 
     // Метрики
-    plan.metrics.engineersUsed =
-        static_cast<int>(
-            plan.routes.size()
-        );
-
-
-    plan.metrics.totalDistanceKm =
-        0.0;
-
-
-    for (const auto& route :
-         plan.routes) {
-
-        plan.metrics.totalDistanceKm +=
-            route.totalDistanceKm;
-    }
-
+    calculateMetrics(plan);
 
     return plan;
 }

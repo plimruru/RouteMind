@@ -1,8 +1,10 @@
 #include "io/JsonLoader.h"
 
 #include <fstream>
+#include <iostream>
 #include <stdexcept>
 #include <string>
+#include <unordered_map>
 
 #include <nlohmann/json.hpp>
 
@@ -11,22 +13,108 @@ using json = nlohmann::json;
 namespace {
 
 int parseTime(const std::string& value)
-    {
-        // Формат:
-        // 2026-08-17T18:00:00
+{
+    // Формат:
+    // 2026-08-17T18:00:00
 
-        int hour =
-            std::stoi(value.substr(11, 2));
+    int hour =
+        std::stoi(value.substr(11, 2));
 
-        int minute =
-            std::stoi(value.substr(14, 2));
+    int minute =
+        std::stoi(value.substr(14, 2));
 
-        return hour * 60 + minute;
-    }
-
+    return hour * 60 + minute;
 }
 
-std::vector<Request> JsonLoader::loadRequests(
+
+Skill parseSkill(const std::string& value)
+{
+    if (value == "Работы на подключение и дозаказы")
+        return Skill::ConnectionWorks;
+
+    if (value == "Локальные работы")
+        return Skill::LocalWorks;
+
+    if (value == "Аварийные работы")
+        return Skill::EmergencyWorks;
+
+    throw std::runtime_error(
+        "Unknown skill: " + value
+    );
+}
+
+
+Transport parseTransport(const std::string& value)
+{
+    if (value == "Автомобиль")
+        return Transport::Car;
+
+    if (value == "Велосипед")
+        return Transport::Bicycle;
+
+    if (value == "Общественный транспорт")
+        return Transport::PublicTransport;
+
+    if (value == "Пешеход")
+        return Transport::Pedestrian;
+
+    throw std::runtime_error(
+        "Unknown transport: " + value
+    );
+}
+
+
+// ------------------------------------------------------------
+// Загрузка координат заявок
+// ------------------------------------------------------------
+
+std::unordered_map<std::string, Point>
+loadRequestLocations(
+    const std::string& path
+) {
+    std::ifstream file(path);
+
+    if (!file.is_open()) {
+        throw std::runtime_error(
+            "Cannot open locations file: " + path
+        );
+    }
+
+    json data;
+    file >> data;
+
+    std::unordered_map<std::string, Point>
+        locations;
+
+    for (const auto& item : data) {
+
+        const std::string requestId =
+            item.at("request_id")
+                .get<std::string>();
+
+        const double latitude =
+            item.at("latitude")
+                .get<double>();
+
+        const double longitude =
+            item.at("longitude")
+                .get<double>();
+
+        locations[requestId] =
+            Point{
+                latitude,
+                longitude
+            };
+    }
+
+    return locations;
+}
+
+} // namespace
+
+
+std::vector<Request>
+JsonLoader::loadRequests(
     const std::string& path
 ) {
     std::ifstream file(path);
@@ -37,89 +125,171 @@ std::vector<Request> JsonLoader::loadRequests(
         );
     }
 
+    // --------------------------------------------------------
+    // Загружаем координаты отдельно
+    // --------------------------------------------------------
+
+    const auto locations =
+        loadRequestLocations(
+            "data/locations.json"
+        );
+
+    std::cout
+        << "Loaded location mappings: "
+        << locations.size()
+        << "\n";
+
     json data;
     file >> data;
 
     std::vector<Request> requests;
 
     for (const auto& item : data) {
+
         Request request;
 
-        request.id = item.at("request_id").get<std::string>();
+        // ----------------------------------------------------
+        // ID
+        // ----------------------------------------------------
+
+        request.id =
+            item.at("request_id")
+                .get<std::string>();
+
+
+        // ----------------------------------------------------
+        // География
+        // ----------------------------------------------------
+
+        auto locationIt =
+            locations.find(request.id);
+
+        if (locationIt != locations.end()) {
+
+            request.location =
+                locationIt->second;
+
+            request.hasLocation = true;
+
+        } else {
+
+            request.location =
+                Point{0.0, 0.0};
+
+            request.hasLocation = false;
+        }
+
+        // ----------------------------------------------------
+        // Длительность
+        // ----------------------------------------------------
+
+        request.durationMinutes = 60;
+
+
+        // ----------------------------------------------------
+        // Временное окно
+        // ----------------------------------------------------
 
         request.windowStart =
-            parseTime(item.at("window_start").get<std::string>());
+            parseTime(
+                item.at("window_start")
+                    .get<std::string>()
+            );
 
         request.windowEnd =
-            parseTime(item.at("window_end").get<std::string>());
-
-        std::string skill =
-            item.at("required_skill");
-
-        if (skill == "Локальные работы") {
-            request.requiredSkill = Skill::LocalWorks;
-        }
-        else if (skill == "Работы на подключение и дозаказы") {
-            request.requiredSkill = Skill::ConnectionWorks;
-        }
-        else if (skill == "Аварийные работы") {
-            request.requiredSkill = Skill::EmergencyWorks;
-        }
-        else {
-            throw std::runtime_error(
-                "Unknown skill: " + skill
+            parseTime(
+                item.at("window_end")
+                    .get<std::string>()
             );
+
+
+        // ----------------------------------------------------
+        // Priority
+        // ----------------------------------------------------
+
+        request.priority =
+            Priority::Normal;
+
+
+        // ----------------------------------------------------
+        // Skill
+        // ----------------------------------------------------
+
+        request.requiredSkill =
+            parseSkill(
+                item.at("required_skill")
+                    .get<std::string>()
+            );
+
+
+        // ----------------------------------------------------
+        // Transport
+        // ----------------------------------------------------
+
+        if (
+            item.contains("required_transport") &&
+            !item.at("required_transport").is_null()
+        ) {
+
+            request.requiredTransport =
+                parseTransport(
+                    item.at("required_transport")
+                        .get<std::string>()
+                );
         }
+
+
+        // ----------------------------------------------------
+        // Дополнительные данные
+        // ----------------------------------------------------
 
         request.region =
-            item.at("region").get<std::string>();
+            item.value("region", "");
 
         request.district =
-            item.at("district").get<std::string>();
+            item.value("district", "");
 
         request.address =
-            item.at("address").get<std::string>();
+            item.value("address", "");
 
         request.requiredSpecialization =
-            item.at("required_specialization").get<std::string>();
+            item.value(
+                "required_specialization",
+                ""
+            );
 
-        if (item.contains("required_transport")
-            && !item.at("required_transport").is_null()) {
 
-            std::string transport =
-                item.at("required_transport");
-
-            if (transport == "Автомобиль") {
-                request.requiredTransport =
-                    Transport::Car;
-            }
-            else if (transport == "Пешеход") {
-                request.requiredTransport =
-                    Transport::Pedestrian;
-            }
-            else if (transport == "Велосипед") {
-                request.requiredTransport =
-                    Transport::Bicycle;
-            }
-            else if (transport == "Общественный транспорт") {
-                request.requiredTransport =
-                    Transport::PublicTransport;
-            }
-            else {
-                throw std::runtime_error(
-                    "Unknown transport: " + transport
-                );
-            }
-        }
-
-        requests.push_back(request);
+        requests.push_back(
+            request
+        );
     }
+
+    int withLocation = 0;
+    int withoutLocation = 0;
+
+    for (const auto& request : requests) {
+        if (request.hasLocation) {
+            ++withLocation;
+        } else {
+            ++withoutLocation;
+        }
+    }
+
+    std::cout
+        << "Requests with coordinates: "
+        << withLocation
+        << "\n";
+
+    std::cout
+        << "Requests without coordinates: "
+        << withoutLocation
+        << "\n";
 
     return requests;
 }
 
-
-std::vector<Engineer> JsonLoader::loadEngineers(
+std::vector<Engineer>
+JsonLoader::loadEngineers(
     const std::string& path
 ) {
     std::ifstream file(path);
@@ -136,88 +306,123 @@ std::vector<Engineer> JsonLoader::loadEngineers(
     std::vector<Engineer> engineers;
 
     for (const auto& item : data) {
+
         Engineer engineer;
 
+        // ----------------------------------------------------
+        // ID
+        // ----------------------------------------------------
+
         engineer.id =
-            item.at("brigade_id").get<std::string>();
+            item.at("brigade_id")
+                .get<std::string>();
+
+
+        // ----------------------------------------------------
+        // Name
+        // ----------------------------------------------------
 
         engineer.name =
-            item.at("brigade_name").get<std::string>();
+            item.at("brigade_name")
+                .get<std::string>();
 
-        std::string transport =
-            item.at("transport");
 
-        if (transport == "Автомобиль") {
-            engineer.transport = Transport::Car;
-        }
-        else if (transport == "Пешеход") {
-            engineer.transport = Transport::Pedestrian;
-        }
-        else if (transport == "Велосипед") {
-            engineer.transport = Transport::Bicycle;
-        }
-        else if (transport == "Общественный транспорт") {
-            engineer.transport = Transport::PublicTransport;
-        }
-        else {
-            throw std::runtime_error(
-                "Unknown transport: " + transport
+        // ----------------------------------------------------
+        // Пока координаты инженеров неизвестны.
+        // ----------------------------------------------------
+
+        engineer.startLocation =
+            Point{0.0, 0.0};
+
+
+        // ----------------------------------------------------
+        // Временная смена
+        // ----------------------------------------------------
+
+        engineer.shiftStart =
+            8 * 60;
+
+        engineer.shiftEnd =
+            20 * 60;
+
+
+        // ----------------------------------------------------
+        // Transport
+        // ----------------------------------------------------
+
+        engineer.transport =
+            parseTransport(
+                item.at("transport")
+                    .get<std::string>()
             );
-        }
+
+
+        // ----------------------------------------------------
+        // Skills
+        // ----------------------------------------------------
 
         for (const auto& skill :
              item.at("skills")) {
 
-            std::string skillName = skill;
+            engineer.skills.push_back(
+                parseSkill(
+                    skill.get<std::string>()
+                )
+            );
+        }
 
-            if (skillName == "Локальные работы") {
-                engineer.skills.push_back(
-                    Skill::LocalWorks
-                );
-            }
-            else if (skillName == "Работы на подключение и дозаказы") {
-                engineer.skills.push_back(
-                    Skill::ConnectionWorks
-                );
-            }
-            else if (skillName == "Аварийные работы") {
-                engineer.skills.push_back(
-                    Skill::EmergencyWorks
-                );
-            }
-            else {
-                throw std::runtime_error(
-                    "Unknown skill: " + skillName
+
+        // ----------------------------------------------------
+        // Specializations
+        // ----------------------------------------------------
+
+        if (item.contains("specializations")) {
+
+            for (const auto& specialization :
+                 item.at("specializations")) {
+
+                engineer.specializations.push_back(
+                    specialization.get<std::string>()
                 );
             }
         }
+
+
+        // ----------------------------------------------------
+        // Region
+        // ----------------------------------------------------
 
         engineer.region =
-            item.at("region").get<std::string>();
+            item.value("region", "");
+
+
+        // ----------------------------------------------------
+        // Home district
+        // ----------------------------------------------------
 
         engineer.homeDistrict =
-            item.at("home_district").get<std::string>();
+            item.value("home_district", "");
 
-        for (const auto& district :
-            item.at("served_districts")) {
 
-            engineer.servedDistricts.push_back(
-                district.get<std::string>()
-            );
+        // ----------------------------------------------------
+        // Served districts
+        // ----------------------------------------------------
+
+        if (item.contains("served_districts")) {
+
+            for (const auto& district :
+                 item.at("served_districts")) {
+
+                engineer.servedDistricts.push_back(
+                    district.get<std::string>()
+                );
+            }
         }
-        
-        for (const auto& specialization :
-            item.at("specializations")) {
 
-            engineer.specializations.push_back(
-                specialization.get<std::string>()
-            );
-        }
 
-        engineer.shiftStart = 8 * 60;
-        engineer.shiftEnd = 20 * 60;
-
-        engineers.push_back(engineer);
+        engineers.push_back(
+            engineer
+        );
     }
 
     return engineers;

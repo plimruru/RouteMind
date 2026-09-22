@@ -8,19 +8,18 @@
 
 struct Engineer {
     std::string id;
-
     std::string name;
 
-    Point startLocation;
+    Point startLocation{0.0, 0.0};
 
-    int shiftStart;
-    int shiftEnd;
+    int shiftStart = 8 * 60;
+    int shiftEnd = 20 * 60;
 
     std::vector<Skill> skills;
 
     std::vector<std::string> specializations;
 
-    Transport transport;
+    Transport transport = Transport::Car;
 
     std::string region;
     std::string homeDistrict;

@@ -6,11 +6,11 @@
     "routes": [],
     "unassigned": [
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "32840"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "78540"
         },
         {
@@ -38,7 +38,7 @@
             "request_id": "75881"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "85188"
         },
         {
@@ -178,7 +178,7 @@
             "request_id": "92618"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "26845"
         },
         {
@@ -186,7 +186,7 @@
             "request_id": "80308"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "93276"
         },
         {
@@ -198,7 +198,7 @@
             "request_id": "46513"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "35265"
         },
         {
@@ -250,7 +250,7 @@
             "request_id": "66944"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "52041"
         },
         {
@@ -258,7 +258,7 @@
             "request_id": "23807"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "60484"
         },
         {
@@ -306,7 +306,7 @@
             "request_id": "44117"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "76173"
         },
         {
@@ -386,7 +386,7 @@
             "request_id": "13404"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "72476"
         },
         {
@@ -394,7 +394,7 @@
             "request_id": "90989"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "7660"
         },
         {
@@ -406,11 +406,11 @@
             "request_id": "65268"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "33880"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "37590"
         },
         {
@@ -434,7 +434,7 @@
             "request_id": "46199"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "75282"
         },
         {
@@ -458,7 +458,7 @@
             "request_id": "54422"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "4724"
         },
         {
@@ -490,7 +490,7 @@
             "request_id": "36961"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "12329"
         },
         {
@@ -510,7 +510,7 @@
             "request_id": "45778"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "20055"
         },
         {
@@ -526,7 +526,7 @@
             "request_id": "98998"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "32589"
         },
         {
@@ -554,11 +554,11 @@
             "request_id": "65034"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "1287"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "31495"
         },
         {
@@ -578,11 +578,11 @@
             "request_id": "46393"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "10135"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "18754"
         },
         {
@@ -618,7 +618,7 @@
             "request_id": "35675"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "82388"
         },
         {
@@ -646,7 +646,7 @@
             "request_id": "94409"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "10245"
         },
         {
@@ -678,7 +678,7 @@
             "request_id": "53587"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "82808"
         },
         {
@@ -702,7 +702,7 @@
             "request_id": "22634"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "98815"
         },
         {
@@ -718,7 +718,7 @@
             "request_id": "47670"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "17892"
         },
         {
@@ -750,7 +750,7 @@
             "request_id": "48238"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "41912"
         },
         {
@@ -758,7 +758,7 @@
             "request_id": "4893"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "68476"
         },
         {
@@ -814,7 +814,7 @@
             "request_id": "21367"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "Missing geolocation",
             "request_id": "24980"
         },
         {

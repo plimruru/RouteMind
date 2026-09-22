@@ -9,16 +9,18 @@
 struct Request {
     std::string id;
 
-    Point location;
+    Point location{0.0, 0.0};
 
-    int durationMinutes;
+    bool hasLocation = false;
 
-    int windowStart;
-    int windowEnd;
+    int durationMinutes = 60;
 
-    Priority priority;
+    int windowStart = 0;
+    int windowEnd = 24 * 60;
 
-    Skill requiredSkill;
+    Priority priority = Priority::Normal;
+
+    Skill requiredSkill = Skill::LocalWorks;
 
     std::optional<Transport> requiredTransport;
 
@@ -26,4 +28,5 @@ struct Request {
     std::string district;
     std::string address;
     std::string requiredSpecialization;
+    std::string description;
 };

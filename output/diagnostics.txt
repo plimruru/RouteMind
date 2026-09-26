@@ -1,0 +1,1956 @@
+Starting planner...
+Loaded location mappings: 175
+Requests with coordinates: 175
+Requests without coordinates: 30
+Loaded requests: 205
+First request location: 0, 0
+Loaded brigade location mappings: 3
+Engineer Восток_Бригада Арташкин start: 55.6981, 37.7786
+Engineer Восток_Бригада Белузин start: 55.6981, 37.7786
+Engineer Восток_Бригада Гусаковский start: 55.6981, 37.7786
+Engineer Восток_Бригада Зверев start: 55.6981, 37.7786
+Engineer Восток_Бригада Каушнян start: 55.6981, 37.7786
+Engineer Восток_Бригада Комарь start: 55.6981, 37.7786
+Engineer Восток_Бригада Матвеев start: 55.6981, 37.7786
+Engineer Восток_Бригада Мельников start: 55.6981, 37.7786
+Engineer Восток_Бригада Перов start: 55.6981, 37.7786
+Engineer Восток_Бригада Попов start: 55.6981, 37.7786
+Engineer Восток_Бригада Свеженцев start: 55.6981, 37.7786
+Engineer Восток_Бригада Соколов start: 55.6981, 37.7786
+Engineer Юго-восток_Бригада Андреев start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Белоновский start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Бузань start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Горбанев start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Демин start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Каушнян start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Козырь start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Макаров start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Паршин start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Рыбин start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Саламатин start: 55.5905, 37.665
+Engineer Юго-восток_Бригада Царьков start: 55.5905, 37.665
+Engineer Югоцентр_Бахарев Андрей start: 55.6648, 37.6158
+Engineer Югоцентр_Брюзгин Ярослав start: 55.6648, 37.6158
+Engineer Югоцентр_Выговский Сергей start: 55.6648, 37.6158
+Engineer Югоцентр_Данилов Даниил start: 55.6648, 37.6158
+Engineer Югоцентр_Ионов Геннадий start: 55.6648, 37.6158
+Engineer Югоцентр_Исхаков Денис start: 55.6648, 37.6158
+Engineer Югоцентр_Капитанчук Александр start: 55.6648, 37.6158
+Engineer Югоцентр_Переладов Алексей start: 55.6648, 37.6158
+Engineer Югоцентр_Прокопенко Вячеслав start: 55.6648, 37.6158
+Engineer Югоцентр_Рыбалкин Егор start: 55.6648, 37.6158
+Engineer Югоцентр_Сакур Тимофей start: 55.6648, 37.6158
+Loaded engineers: 35
+
+--- Request diagnostic ---
+Request: 23637
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Service exceeds engineer shift
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+  Югоцентр_Брюзгин Ярослав: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+  Югоцентр_Сакур Тимофей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 97770
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 35
+All constraints candidates: 30
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Service exceeds engineer shift
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Восток_Бригада Комарь: Service exceeds engineer shift
+  Восток_Бригада Матвеев: Service exceeds engineer shift
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Перов: Service exceeds engineer shift
+  Восток_Бригада Попов: Service exceeds engineer shift
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Service exceeds engineer shift
+  Юго-восток_Бригада Царьков: Service exceeds engineer shift
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+  Югоцентр_Брюзгин Ярослав: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Данилов Даниил: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Прокопенко Вячеслав: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+  Югоцентр_Сакур Тимофей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 52576
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 8
+Transport candidates: 18
+All constraints candidates: 6
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+  Югоцентр_Сакур Тимофей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 78036
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 35
+All constraints candidates: 30
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Service exceeds engineer shift
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Восток_Бригада Комарь: Service exceeds engineer shift
+  Восток_Бригада Матвеев: Service exceeds engineer shift
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Перов: Service exceeds engineer shift
+  Восток_Бригада Попов: Service exceeds engineer shift
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Service exceeds engineer shift
+  Юго-восток_Бригада Царьков: Service exceeds engineer shift
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+  Югоцентр_Брюзгин Ярослав: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Данилов Даниил: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Прокопенко Вячеслав: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+  Югоцентр_Сакур Тимофей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 49105
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 12
+Transport candidates: 18
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 26177
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 7
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 24132
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Service exceeds engineer shift
+  Восток_Бригада Белузин: Service exceeds engineer shift
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Матвеев: Service exceeds engineer shift
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Свеженцев: Service exceeds engineer shift
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Ионов Геннадий: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Прокопенко Вячеслав: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 95501
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Service exceeds engineer shift
+  Восток_Бригада Белузин: Service exceeds engineer shift
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Матвеев: Service exceeds engineer shift
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Свеженцев: Service exceeds engineer shift
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Ионов Геннадий: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Прокопенко Вячеслав: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 80308
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 5
+Transport candidates: 7
+All constraints candidates: 0
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+---------------------------
+
+--- Request diagnostic ---
+Request: 5406
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 5
+Transport candidates: 7
+All constraints candidates: 1
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 1
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Комарь: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 75745
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 12
+Transport candidates: 18
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 57353
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 12
+Transport candidates: 18
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 78876
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 79144
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 8
+Transport candidates: 35
+All constraints candidates: 8
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 8
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Попов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 79450
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 12
+Transport candidates: 18
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 58129
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 8
+Transport candidates: 35
+All constraints candidates: 8
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 8
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Попов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 13404
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 35
+All constraints candidates: 30
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Комарь: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Восток_Бригада Попов: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Каушнян: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Service exceeds engineer shift
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Юго-восток_Бригада Царьков: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+  Югоцентр_Брюзгин Ярослав: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Данилов Даниил: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Прокопенко Вячеслав: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+  Югоцентр_Сакур Тимофей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 65268
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 6
+Transport candidates: 7
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 88209
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 3
+Transport candidates: 7
+All constraints candidates: 0
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+---------------------------
+
+--- Request diagnostic ---
+Request: 24482
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 4
+Transport candidates: 7
+All constraints candidates: 0
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+---------------------------
+
+--- Request diagnostic ---
+Request: 40111
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 6
+Transport candidates: 35
+All constraints candidates: 6
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 5
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 63577
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 17
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 7610
+Window: 1080-1200
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 5
+Transport candidates: 7
+All constraints candidates: 0
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+---------------------------
+
+--- Request diagnostic ---
+Request: 19216
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 3
+Transport candidates: 35
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 11872
+Window: 840-960
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 4
+Transport candidates: 35
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 11899
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 3
+Transport candidates: 35
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 60886
+Window: 960-1080
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 5
+Transport candidates: 3
+All constraints candidates: 0
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+---------------------------
+
+--- Request diagnostic ---
+Request: 63894
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 5
+Transport candidates: 35
+All constraints candidates: 5
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 5
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 64168
+Window: 960-1080
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 3
+Transport candidates: 35
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 40919
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 4
+Transport candidates: 35
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 95692
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 19
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 3151
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 15
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 45778
+Window: 840-960
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 4
+Transport candidates: 35
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 7258
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 35
+All constraints candidates: 6
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Восток_Бригада Свеженцев: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 98998
+Window: 1-1439
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 51774
+Window: 1-1439
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 90915
+Window: 1-1439
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 45243
+Window: 1-1439
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 81698
+Window: 1-1439
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 65034
+Window: 1-1439
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 74198
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 35
+All constraints candidates: 30
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Service exceeds engineer shift
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Восток_Бригада Комарь: Service exceeds engineer shift
+  Восток_Бригада Матвеев: Service exceeds engineer shift
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Перов: Service exceeds engineer shift
+  Восток_Бригада Попов: Service exceeds engineer shift
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Service exceeds engineer shift
+  Юго-восток_Бригада Царьков: Service exceeds engineer shift
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+  Югоцентр_Брюзгин Ярослав: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Данилов Даниил: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Прокопенко Вячеслав: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+  Югоцентр_Сакур Тимофей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 46393
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 7
+All constraints candidates: 7
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Перов: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Югоцентр_Данилов Даниил: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 84627
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 35
+All constraints candidates: 30
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Арташкин: Service exceeds engineer shift
+  Восток_Бригада Зверев: Service exceeds engineer shift
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Восток_Бригада Комарь: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Service exceeds engineer shift
+  Восток_Бригада Перов: Service exceeds engineer shift
+  Восток_Бригада Попов: Service exceeds engineer shift
+  Восток_Бригада Соколов: Service exceeds engineer shift
+  Юго-восток_Бригада Андреев: Service exceeds engineer shift
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Бузань: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Макаров: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Service exceeds engineer shift
+  Юго-восток_Бригада Саламатин: Service exceeds engineer shift
+  Юго-восток_Бригада Царьков: Service exceeds engineer shift
+  Югоцентр_Бахарев Андрей: Service exceeds engineer shift
+  Югоцентр_Брюзгин Ярослав: Service exceeds engineer shift
+  Югоцентр_Выговский Сергей: Service exceeds engineer shift
+  Югоцентр_Данилов Даниил: Service exceeds engineer shift
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+  Югоцентр_Переладов Алексей: Service exceeds engineer shift
+  Югоцентр_Прокопенко Вячеслав: Service exceeds engineer shift
+  Югоцентр_Рыбалкин Егор: Service exceeds engineer shift
+  Югоцентр_Сакур Тимофей: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 74949
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 93086
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 23380
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 35
+All constraints candidates: 30
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 30
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Комарь: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Восток_Бригада Попов: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Каушнян: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Юго-восток_Бригада Царьков: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Данилов Даниил: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 37272
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 34366
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 67554
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 8
+Transport candidates: 18
+All constraints candidates: 6
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 6
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 94409
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 52405
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 7
+All constraints candidates: 7
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 7
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Югоцентр_Данилов Даниил: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 98182
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 8
+Transport candidates: 35
+All constraints candidates: 8
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 8
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Попов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 76082
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 12
+Transport candidates: 18
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 29890
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 35
+All constraints candidates: 30
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 30
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Комарь: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Восток_Бригада Попов: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Каушнян: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Юго-восток_Бригада Царьков: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Данилов Даниил: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 77563
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 53587
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 18
+All constraints candidates: 16
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 16
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Каушнян: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+  Югоцентр_Сакур Тимофей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 7939
+Window: 720-840
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 30
+Transport candidates: 7
+All constraints candidates: 7
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 7
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Югоцентр_Данилов Даниил: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 92031
+Window: 1080-1200
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 3
+Transport candidates: 35
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 31260
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 3
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Белузин: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 69967
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 12
+Transport candidates: 35
+All constraints candidates: 12
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 11
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Восток_Бригада Попов: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Данилов Даниил: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 22634
+Window: 840-960
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 3
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 33527
+Window: 600-720
+Duration: 60 min
+Skill candidates: 33
+Specialization candidates: 3
+Transport candidates: 35
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 47670
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 7
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Юго-восток_Бригада Белоновский: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Service exceeds engineer shift
+  Югоцентр_Капитанчук Александр: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 43506
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 5
+Transport candidates: 3
+All constraints candidates: 0
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+---------------------------
+
+--- Request diagnostic ---
+Request: 48227
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 20
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 60720
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 7
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 48238
+Window: 840-960
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 5
+Transport candidates: 35
+All constraints candidates: 5
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 5
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Юго-восток_Бригада Демин: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 4893
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 20
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 50219
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 19
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 76678
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 6
+Transport candidates: 7
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 47330
+Window: 840-960
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 4
+Transport candidates: 35
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 26645
+Window: 960-1080
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 2
+Transport candidates: 35
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 2
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 24076
+Window: 720-840
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 4
+Transport candidates: 7
+All constraints candidates: 1
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 1
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 30243
+Window: 1080-1200
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 3
+Transport candidates: 35
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Гусаковский: Cannot finish service inside request time window
+  Юго-восток_Бригада Горбанев: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 32807
+Window: 600-720
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 6
+Transport candidates: 35
+All constraints candidates: 6
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 6
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Перов: Cannot finish service inside request time window
+  Юго-восток_Бригада Козырь: Cannot finish service inside request time window
+  Юго-восток_Бригада Макаров: Cannot finish service inside request time window
+  Югоцентр_Бахарев Андрей: Cannot finish service inside request time window
+  Югоцентр_Брюзгин Ярослав: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 73572
+Window: 840-960
+Duration: 60 min
+Skill candidates: 30
+Specialization candidates: 20
+Transport candidates: 35
+All constraints candidates: 20
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 20
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Арташкин: Cannot finish service inside request time window
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Зверев: Cannot finish service inside request time window
+  Восток_Бригада Матвеев: Cannot finish service inside request time window
+  Восток_Бригада Мельников: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Юго-восток_Бригада Андреев: Cannot finish service inside request time window
+  Юго-восток_Бригада Белоновский: Cannot finish service inside request time window
+  Юго-восток_Бригада Бузань: Cannot finish service inside request time window
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Рыбин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+  Югоцентр_Ионов Геннадий: Cannot finish service inside request time window
+  Югоцентр_Исхаков Денис: Cannot finish service inside request time window
+  Югоцентр_Капитанчук Александр: Cannot finish service inside request time window
+  Югоцентр_Переладов Алексей: Cannot finish service inside request time window
+  Югоцентр_Прокопенко Вячеслав: Cannot finish service inside request time window
+  Югоцентр_Рыбалкин Егор: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 41962
+Window: 960-1080
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 4
+Transport candidates: 18
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 97886
+Window: 960-1080
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 4
+Transport candidates: 35
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 17349
+Window: 840-960
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 4
+Transport candidates: 18
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 54964
+Window: 600-720
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 4
+Transport candidates: 18
+All constraints candidates: 3
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 3
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 21367
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 18
+All constraints candidates: 2
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+---------------------------
+
+--- Request diagnostic ---
+Request: 15648
+Window: 960-1080
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 4
+Transport candidates: 35
+All constraints candidates: 4
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 4
+GREEDY CONFLICT: request was feasible for a fresh engineer
+Current failures:
+  Восток_Бригада Белузин: Cannot finish service inside request time window
+  Восток_Бригада Свеженцев: Cannot finish service inside request time window
+  Восток_Бригада Соколов: Cannot finish service inside request time window
+  Югоцентр_Выговский Сергей: Cannot finish service inside request time window
+---------------------------
+
+--- Request diagnostic ---
+Request: 57299
+Window: 1200-1320
+Duration: 60 min
+Skill candidates: 9
+Specialization candidates: 6
+Transport candidates: 35
+All constraints candidates: 6
+Current time-feasible candidates: 0
+Fresh time-feasible candidates: 0
+INTRINSICALLY INFEASIBLE: no fresh engineer can satisfy the time constraints
+Current failures:
+  Восток_Бригада Каушнян: Service exceeds engineer shift
+  Восток_Бригада Свеженцев: Service exceeds engineer shift
+  Юго-восток_Бригада Горбанев: Service exceeds engineer shift
+  Юго-восток_Бригада Козырь: Service exceeds engineer shift
+  Юго-восток_Бригада Паршин: Cannot finish service inside request time window
+  Юго-восток_Бригада Саламатин: Service exceeds engineer shift
+---------------------------
+
+Plan created.
+Routes: 35
+Unassigned requests: 113
+
+Metrics:
+Engineers used: 35
+Total distance: 1474.87 km
+
+Explanations: 205
+
+Plan written to output/plan.json

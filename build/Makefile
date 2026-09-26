@@ -249,6 +249,30 @@ cpp/src/planner/Planner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Planner.cpp.s
 .PHONY : cpp/src/planner/Planner.cpp.s
 
+cpp/src/planner/Repairer.o: cpp/src/planner/Repairer.cpp.o
+.PHONY : cpp/src/planner/Repairer.o
+
+# target to build an object file
+cpp/src/planner/Repairer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Repairer.cpp.o
+.PHONY : cpp/src/planner/Repairer.cpp.o
+
+cpp/src/planner/Repairer.i: cpp/src/planner/Repairer.cpp.i
+.PHONY : cpp/src/planner/Repairer.i
+
+# target to preprocess a source file
+cpp/src/planner/Repairer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Repairer.cpp.i
+.PHONY : cpp/src/planner/Repairer.cpp.i
+
+cpp/src/planner/Repairer.s: cpp/src/planner/Repairer.cpp.s
+.PHONY : cpp/src/planner/Repairer.s
+
+# target to generate assembly for a file
+cpp/src/planner/Repairer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/route_planner.dir/build.make CMakeFiles/route_planner.dir/cpp/src/planner/Repairer.cpp.s
+.PHONY : cpp/src/planner/Repairer.cpp.s
+
 cpp/src/planner/Scheduler.o: cpp/src/planner/Scheduler.cpp.o
 .PHONY : cpp/src/planner/Scheduler.o
 
@@ -321,6 +345,9 @@ help:
 	@echo "... cpp/src/planner/Planner.o"
 	@echo "... cpp/src/planner/Planner.i"
 	@echo "... cpp/src/planner/Planner.s"
+	@echo "... cpp/src/planner/Repairer.o"
+	@echo "... cpp/src/planner/Repairer.i"
+	@echo "... cpp/src/planner/Repairer.s"
 	@echo "... cpp/src/planner/Scheduler.o"
 	@echo "... cpp/src/planner/Scheduler.i"
 	@echo "... cpp/src/planner/Scheduler.s"

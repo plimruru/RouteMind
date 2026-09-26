@@ -1,19 +1,17 @@
 #include "planner/Planner.h"
 
+#include "planner/Repairer.h"
 #include "metrics/Metrics.h"
 #include "planner/Scheduler.h"
 #include "routing/Router.h"
 
 #include <algorithm>
-#include <cmath>
+#include <limits>
+#include <optional>
 #include <string>
 #include <vector>
 
 namespace {
-
-// ------------------------------------------------------------
-// Проверка навыка
-// ------------------------------------------------------------
 
 bool hasSkill(
     const Engineer& engineer,
@@ -26,17 +24,10 @@ bool hasSkill(
     ) != engineer.skills.end();
 }
 
-
-// ------------------------------------------------------------
-// Проверка специализации
-// ------------------------------------------------------------
-
 bool hasSpecialization(
     const Engineer& engineer,
     const std::string& required
 ) {
-    // Если специализация не указана,
-    // считаем, что дополнительного требования нет.
     if (required.empty()) {
         return true;
     }
@@ -48,17 +39,10 @@ bool hasSpecialization(
     ) != engineer.specializations.end();
 }
 
-
-// ------------------------------------------------------------
-// Проверка транспорта
-// ------------------------------------------------------------
-
 bool transportMatches(
     const Engineer& engineer,
     const Request& request
 ) {
-    // Если заявка не требует конкретный транспорт,
-    // подходит любой транспорт.
     if (!request.requiredTransport.has_value()) {
         return true;
     }
@@ -67,66 +51,41 @@ bool transportMatches(
            request.requiredTransport.value();
 }
 
-// ------------------------------------------------------------
-// Внутреннее состояние маршрута
-// ------------------------------------------------------------
-
 struct WorkingRoute {
-
     const Engineer* engineer = nullptr;
 
-    Point currentLocation{
-        0.0,
-        0.0
-    };
-
+    Point currentLocation{0.0, 0.0};
     int currentTime = 0;
 
     double totalDistanceKm = 0.0;
-
     int totalTravelMinutes = 0;
 
     std::vector<ScheduledRequest> requests;
 };
 
-// ------------------------------------------------------------
-// Можно ли назначить заявку на маршрут
-// ------------------------------------------------------------
-
 bool canAssign(
     const Request& request,
     const WorkingRoute& route
 ) {
-    const Engineer& engineer =
-        *route.engineer;
+    const Engineer& engineer = *route.engineer;
 
-    if (!hasSkill(
-            engineer,
-            request.requiredSkill)) {
-
+    if (!hasSkill(engineer, request.requiredSkill)) {
         return false;
     }
 
     if (!hasSpecialization(
             engineer,
-            request.requiredSpecialization)) {
-
+            request.requiredSpecialization
+        )) {
         return false;
     }
 
-    if (!transportMatches(
-            engineer,
-            request)) {
-
+    if (!transportMatches(engineer, request)) {
         return false;
     }
 
     return true;
 }
-
-// ------------------------------------------------------------
-// Назначение заявки
-// ------------------------------------------------------------
 
 void assignRequest(
     const Request& request,
@@ -135,30 +94,17 @@ void assignRequest(
 ) {
     ScheduledRequest scheduled;
 
-    scheduled.requestId =
-        request.id;
-
-    scheduled.arrivalTime =
-        schedule.arrivalTime;
-
-    scheduled.startTime =
-        schedule.startTime;
-
-    scheduled.finishTime =
-        schedule.finishTime;
-
+    scheduled.requestId = request.id;
+    scheduled.arrivalTime = schedule.arrivalTime;
+    scheduled.startTime = schedule.startTime;
+    scheduled.finishTime = schedule.finishTime;
     scheduled.distanceFromPreviousKm =
         schedule.distanceFromPreviousKm;
 
-    route.requests.push_back(
-        scheduled
-    );
+    route.requests.push_back(scheduled);
 
-    route.currentLocation =
-        request.location;
-
-    route.currentTime =
-        schedule.finishTime;
+    route.currentLocation = request.location;
+    route.currentTime = schedule.finishTime;
 
     route.totalDistanceKm +=
         schedule.distanceFromPreviousKm;
@@ -167,72 +113,299 @@ void assignRequest(
         schedule.travelMinutes;
 }
 
-// ------------------------------------------------------------
-// Причина, почему заявку не удалось назначить
-// ------------------------------------------------------------
+struct Candidate {
+    std::size_t routeIndex = 0;
+    ScheduleResult schedule;
+};
+
+struct EvaluatedRequest {
+    std::size_t requestIndex = 0;
+    std::vector<Candidate> candidates;
+};
+
+std::vector<Candidate> findCandidates(
+    const Request& request,
+    const std::vector<WorkingRoute>& routes,
+    const Router& router,
+    const Scheduler& scheduler
+) {
+    std::vector<Candidate> candidates;
+
+    for (std::size_t routeIndex = 0;
+         routeIndex < routes.size();
+         ++routeIndex) {
+
+        const WorkingRoute& route = routes[routeIndex];
+
+        if (!canAssign(request, route)) {
+            continue;
+        }
+
+        ScheduleResult schedule =
+            scheduler.schedule(
+                route.currentLocation,
+                *route.engineer,
+                request,
+                route.currentTime,
+                router
+            );
+
+        if (!schedule.feasible) {
+            continue;
+        }
+
+        Candidate candidate;
+        candidate.routeIndex = routeIndex;
+        candidate.schedule = schedule;
+
+        candidates.push_back(candidate);
+    }
+
+    return candidates;
+}
+
+bool containsRoute(
+    const std::vector<Candidate>& candidates,
+    std::size_t routeIndex
+) {
+    for (const auto& candidate : candidates) {
+        if (candidate.routeIndex == routeIndex) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+int countFutureOptions(
+    std::size_t routeIndex,
+    std::size_t selectedRequestIndex,
+    const std::vector<EvaluatedRequest>& evaluated
+) {
+    int result = 0;
+
+    for (const auto& item : evaluated) {
+        if (item.requestIndex == selectedRequestIndex) {
+            continue;
+        }
+
+        if (containsRoute(item.candidates, routeIndex)) {
+            ++result;
+        }
+    }
+
+    return result;
+}
+
+bool betterCandidate(
+    const Candidate& candidate,
+    const Candidate& currentBest,
+    const std::vector<EvaluatedRequest>& evaluated,
+    std::size_t requestIndex
+) {
+    const int candidateFutureOptions =
+        countFutureOptions(
+            candidate.routeIndex,
+            requestIndex,
+            evaluated
+        );
+
+    const int bestFutureOptions =
+        countFutureOptions(
+            currentBest.routeIndex,
+            requestIndex,
+            evaluated
+        );
+
+    /*
+     * Сначала отдаём предпочтение инженеру,
+     * который является вариантом для большего числа
+     * других ещё не назначенных заявок.
+     *
+     * Это оставляет дефицитных инженеров свободными
+     * для следующих заявок.
+     */
+    if (candidateFutureOptions != bestFutureOptions) {
+        return candidateFutureOptions >
+               bestFutureOptions;
+    }
+
+    /*
+     * Если гибкость одинаковая — выбираем более
+     * дешёвый по времени вариант.
+     */
+    const int candidateCost =
+        candidate.schedule.travelMinutes +
+        (candidate.schedule.startTime -
+         candidate.schedule.arrivalTime);
+
+    const int bestCost =
+        currentBest.schedule.travelMinutes +
+        (currentBest.schedule.startTime -
+         currentBest.schedule.arrivalTime);
+
+    if (candidateCost != bestCost) {
+        return candidateCost < bestCost;
+    }
+
+    /*
+     * Финальный tie-breaker — инженер,
+     * который раньше освобождается.
+     */
+    return candidate.schedule.finishTime <
+           currentBest.schedule.finishTime;
+}
 
 std::string unassignedReason(
     const Request& request,
     const std::vector<Engineer>& engineers
 ) {
     bool skillFound = false;
-
     bool specializationFound = false;
-
     bool transportFound = false;
-
+    bool allConstraintsFound = false;
 
     for (const auto& engineer : engineers) {
-
-        if (hasSkill(
+        const bool skill =
+            hasSkill(
                 engineer,
-                request.requiredSkill)) {
+                request.requiredSkill
+            );
 
+        const bool specialization =
+            hasSpecialization(
+                engineer,
+                request.requiredSpecialization
+            );
+
+        const bool transport =
+            transportMatches(
+                engineer,
+                request
+            );
+
+        if (skill) {
             skillFound = true;
         }
 
-
-        if (hasSpecialization(
-                engineer,
-                request.requiredSpecialization)) {
-
+        if (specialization) {
             specializationFound = true;
         }
 
-
-        if (transportMatches(
-                engineer,
-                request)) {
-
+        if (transport) {
             transportFound = true;
         }
-    }
 
+        /*
+         * Важно:
+         * проверяем все ограничения одновременно
+         * на одном инженере.
+         */
+        if (skill && specialization && transport) {
+            allConstraintsFound = true;
+        }
+    }
 
     if (!skillFound) {
         return "No engineer with required skill";
     }
 
-
     if (!specializationFound) {
         return "No engineer with required specialization";
     }
-
 
     if (!transportFound) {
         return "No engineer with required transport";
     }
 
+    if (!allConstraintsFound) {
+        return
+            "No engineer satisfies all "
+            "skill, specialization and transport requirements";
+    }
 
     return "No feasible time slot";
 }
 
+void addAssignedExplanation(
+    std::optional<RequestExplanation>& slot,
+    const Request& request,
+    const Engineer& engineer,
+    const ScheduleResult& schedule,
+    const std::vector<EvaluatedRequest>& evaluated
+) {
+    RequestExplanation explanation;
+
+    explanation.requestId = request.id;
+    explanation.assigned = true;
+    explanation.engineerId = engineer.id;
+
+    explanation.reasons.push_back(
+        "Selected by constrained-first scheduling"
+    );
+
+    explanation.reasons.push_back(
+        "Required skill is available"
+    );
+
+    if (!request.requiredSpecialization.empty()) {
+        explanation.reasons.push_back(
+            "Required specialization is available"
+        );
+    }
+
+    if (request.requiredTransport.has_value()) {
+        explanation.reasons.push_back(
+            "Required transport is available"
+        );
+    }
+
+    explanation.reasons.push_back(
+        "Time window is satisfied"
+    );
+
+    explanation.reasons.push_back(
+        "Engineer shift is sufficient"
+    );
+
+    /*
+     * Оцениваем, сколько альтернативных заявок
+     * ещё могли использовать выбранного инженера.
+     */
+    int futureOptions = 0;
+
+    for (const auto& item : evaluated) {
+        if (item.requestIndex == 0) {
+            // requestIndex = 0 может быть настоящим индексом,
+            // поэтому здесь ничего не делаем.
+        }
+
+        for (const auto& candidate : item.candidates) {
+            if (candidate.routeIndex == 0) {
+                // Аналогично: routeIndex = 0 валиден.
+            }
+        }
+    }
+
+    /*
+     * Для основной пользовательской диагностики достаточно
+     * сообщить сам факт оптимизационного выбора.
+     *
+     * Детальные числовые причины будут добавлены позже
+     * при необходимости.
+     */
+    (void)futureOptions;
+
+    if (schedule.startTime > schedule.arrivalTime) {
+        explanation.reasons.push_back(
+            "Waiting for request time window"
+        );
+    }
+
+    slot = explanation;
+}
+
 } // namespace
-
-
-// ============================================================
-// Основной планировщик
-// ============================================================
 
 Plan Planner::solve(
     const std::vector<Request>& requests,
@@ -240,296 +413,388 @@ Plan Planner::solve(
 ) {
     Plan plan;
 
+    std::vector<WorkingRoute> workingRoutes;
+    workingRoutes.reserve(engineers.size());
 
-    std::vector<WorkingRoute>
-        workingRoutes;
-
-
-    // Создаем рабочий маршрут для каждой бригады
     for (const auto& engineer : engineers) {
-
         WorkingRoute route;
 
-        route.engineer =
-            &engineer;
+        route.engineer = &engineer;
+        route.currentLocation = engineer.startLocation;
+        route.currentTime = engineer.shiftStart;
 
-        route.currentLocation =
-            engineer.startLocation;
-
-        route.currentTime =
-            engineer.shiftStart;
-
-
-        workingRoutes.push_back(
-            route
-        );
+        workingRoutes.push_back(route);
     }
 
     Router router;
     Scheduler scheduler;
 
-    // Идем по заявкам
-    for (const auto& request : requests) {
+    /*
+     * Храним индексы заявок, которые ещё не назначены.
+     *
+     * Заявки с геолокацией будут обработаны алгоритмом.
+     * Заявки без геолокации сразу попадут в unassigned.
+     */
+    std::vector<std::size_t> pending;
+
+    for (std::size_t i = 0;
+         i < requests.size();
+         ++i) {
+
+        const Request& request = requests[i];
 
         if (!request.hasLocation) {
-
             UnassignedRequest unassigned;
 
-            unassigned.requestId =
-                request.id;
+            unassigned.requestId = request.id;
+            unassigned.reason = "Missing geolocation";
 
-            unassigned.reason =
-                "Missing geolocation";
-
-            plan.unassigned.push_back(
-                unassigned
-            );
+            plan.unassigned.push_back(unassigned);
 
             RequestExplanation explanation;
 
-            explanation.requestId =
-                request.id;
-
+            explanation.requestId = request.id;
             explanation.assigned = false;
-
-            explanation.engineerId =
-                "";
-
+            explanation.engineerId = "";
             explanation.reasons.push_back(
                 "Missing geolocation"
             );
 
-            plan.explanations.push_back(
-                explanation
-            );
+            plan.explanations.push_back(explanation);
 
             continue;
         }
 
-        bool assigned = false;
+        pending.push_back(i);
+    }
 
-        // Ищем первую подходящую бригаду
-        for (auto& route : workingRoutes) {
+    /*
+     * Основной алгоритм:
+     *
+     * 1. Для каждой оставшейся заявки считаем все текущие
+     *    feasible-кандидаты.
+     *
+     * 2. Выбираем заявку с наименьшим количеством
+     *    кандидатов.
+     *
+     * 3. Если несколько заявок одинаково ограничены,
+     *    берём более узкое временное окно.
+     *
+     * 4. Для выбранной заявки выбираем инженера,
+     *    который оставляет максимальную гибкость
+     *    для остальных заявок.
+     *
+     * 5. При равенстве — минимизируем travel + waiting.
+     */
+    while (!pending.empty()) {
+        std::vector<EvaluatedRequest> evaluated;
+        evaluated.reserve(pending.size());
 
-            if (!canAssign(
-                    request,
-                    route)) {
+        for (const std::size_t requestIndex : pending) {
+            EvaluatedRequest item;
 
-                continue;
-            }
+            item.requestIndex = requestIndex;
 
-            ScheduleResult schedule =
-                scheduler.schedule(
-                    route.currentLocation,
-                    *route.engineer,
-                    request,
-                    route.currentTime,
-                    router
+            item.candidates =
+                findCandidates(
+                    requests[requestIndex],
+                    workingRoutes,
+                    router,
+                    scheduler
                 );
 
-            if (!schedule.feasible) {
-                continue;
-            }
-
-            assignRequest(
-                request,
-                route,
-                schedule
-            );
-
-            RequestExplanation explanation;
-
-            explanation.requestId =
-                request.id;
-
-            explanation.assigned = true;
-
-            explanation.engineerId =
-                route.engineer->id;
-
-            explanation.reasons.push_back(
-                "Required skill is available"
-            );
-
-            if (!request.requiredSpecialization.empty()) {
-                explanation.reasons.push_back(
-                    "Required specialization is available"
-                );
-            }
-
-            if (request.requiredTransport.has_value()) {
-                explanation.reasons.push_back(
-                    "Required transport is available"
-                );
-            }
-
-            explanation.reasons.push_back(
-                "Time window is satisfied"
-            );
-
-            explanation.reasons.push_back(
-                "Engineer shift is sufficient"
-            );
-
-            plan.explanations.push_back(
-                explanation
-            );
-
-            assigned = true;
-
-            break;
+            evaluated.push_back(item);
         }
 
+        /*
+         * Ищем самую ограниченную заявку.
+         */
+        std::size_t bestEvaluatedIndex = 0;
 
-        // Если подходящей бригады нет
-        if (!assigned) {
+        for (std::size_t i = 1;
+             i < evaluated.size();
+             ++i) {
 
-            const std::string reason =
+            const Request& currentRequest =
+                requests[
+                    evaluated[i].requestIndex
+                ];
+
+            const Request& bestRequest =
+                requests[
+                    evaluated[bestEvaluatedIndex].requestIndex
+                ];
+
+            const std::size_t currentCandidateCount =
+                evaluated[i].candidates.size();
+
+            const std::size_t bestCandidateCount =
+                evaluated[
+                    bestEvaluatedIndex
+                ].candidates.size();
+
+            if (currentCandidateCount <
+                bestCandidateCount) {
+
+                bestEvaluatedIndex = i;
+                continue;
+            }
+
+            if (currentCandidateCount >
+                bestCandidateCount) {
+
+                continue;
+            }
+
+            /*
+             * При одинаковом числе кандидатов
+             * сначала обрабатываем более узкое окно.
+             */
+            const int currentWindow =
+                currentRequest.windowEnd -
+                currentRequest.windowStart;
+
+            const int bestWindow =
+                bestRequest.windowEnd -
+                bestRequest.windowStart;
+
+            if (currentWindow < bestWindow) {
+                bestEvaluatedIndex = i;
+                continue;
+            }
+
+            if (currentWindow > bestWindow) {
+                continue;
+            }
+
+            /*
+             * При одинаковом окне сначала обслуживаем
+             * более длинную заявку.
+             */
+            if (currentRequest.durationMinutes >
+                bestRequest.durationMinutes) {
+
+                bestEvaluatedIndex = i;
+            }
+        }
+
+        EvaluatedRequest selected =
+            evaluated[bestEvaluatedIndex];
+
+        const std::size_t requestIndex =
+            selected.requestIndex;
+
+        const Request& request =
+            requests[requestIndex];
+
+        /*
+         * Если кандидатов нет уже в текущем состоянии,
+         * дальнейшее добавление заявок этот слот не улучшит.
+         */
+        if (selected.candidates.empty()) {
+            UnassignedRequest unassigned;
+
+            unassigned.requestId = request.id;
+            unassigned.reason =
                 unassignedReason(
                     request,
                     engineers
                 );
 
-            UnassignedRequest unassigned;
-
-            unassigned.requestId =
-                request.id;
-
-            unassigned.reason =
-                reason;
-
-            plan.unassigned.push_back(
-                unassigned
-            );
-
+            plan.unassigned.push_back(unassigned);
 
             RequestExplanation explanation;
 
-            explanation.requestId =
-                request.id;
-
+            explanation.requestId = request.id;
             explanation.assigned = false;
-
-            explanation.engineerId =
-                "";
-
+            explanation.engineerId = "";
             explanation.reasons.push_back(
-                reason
+                unassigned.reason
             );
 
-            plan.explanations.push_back(
-                explanation
+            /*
+             * Отдельно отмечаем, что заявка была проверена
+             * уже после применения предыдущих назначений.
+             */
+            explanation.reasons.push_back(
+                "No feasible engineer in current route state"
+            );
+
+            plan.explanations.push_back(explanation);
+
+            pending.erase(
+                std::remove(
+                    pending.begin(),
+                    pending.end(),
+                    requestIndex
+                ),
+                pending.end()
+            );
+
+            continue;
+        }
+
+        /*
+         * Выбираем конкретного инженера.
+         */
+        Candidate bestCandidate =
+            selected.candidates.front();
+
+        for (std::size_t i = 1;
+             i < selected.candidates.size();
+             ++i) {
+
+            const Candidate& candidate =
+                selected.candidates[i];
+
+            if (betterCandidate(
+                    candidate,
+                    bestCandidate,
+                    evaluated,
+                    requestIndex
+                )) {
+
+                bestCandidate = candidate;
+            }
+        }
+
+        WorkingRoute& selectedRoute =
+            workingRoutes[
+                bestCandidate.routeIndex
+            ];
+
+        assignRequest(
+            request,
+            selectedRoute,
+            bestCandidate.schedule
+        );
+
+        RequestExplanation explanation;
+
+        explanation.requestId = request.id;
+        explanation.assigned = true;
+        explanation.engineerId =
+            selectedRoute.engineer->id;
+
+        explanation.reasons.push_back(
+            "Selected by constrained-first scheduling"
+        );
+
+        explanation.reasons.push_back(
+            "Required skill is available"
+        );
+
+        if (!request.requiredSpecialization.empty()) {
+            explanation.reasons.push_back(
+                "Required specialization is available"
             );
         }
+
+        if (request.requiredTransport.has_value()) {
+            explanation.reasons.push_back(
+                "Required transport is available"
+            );
+        }
+
+        explanation.reasons.push_back(
+            "Time window is satisfied"
+        );
+
+        explanation.reasons.push_back(
+            "Engineer shift is sufficient"
+        );
+
+        explanation.reasons.push_back(
+            "Engineer selected while preserving "
+            "flexibility for other requests"
+        );
+
+        if (bestCandidate.schedule.startTime >
+            bestCandidate.schedule.arrivalTime) {
+
+            explanation.reasons.push_back(
+                "Waiting for request time window"
+            );
+        }
+
+        plan.explanations.push_back(explanation);
+
+        pending.erase(
+            std::remove(
+                pending.begin(),
+                pending.end(),
+                requestIndex
+            ),
+            pending.end()
+        );
     }
 
-
-    // Переносим рабочие маршруты
-    // в итоговый Plan
-    for (const auto& working :
-         workingRoutes) {
-
+    /*
+     * Формируем финальные маршруты.
+     */
+    for (const auto& working : workingRoutes) {
         if (working.requests.empty()) {
             continue;
         }
 
-
         Route route;
-
 
         route.engineerId =
             working.engineer->id;
 
-
         route.requests =
             working.requests;
-
 
         route.totalDistanceKm =
             working.totalDistanceKm;
 
-
         route.totalTravelMinutes =
             working.totalTravelMinutes;
 
-
-        plan.routes.push_back(
-            route
-        );
+        plan.routes.push_back(route);
     }
 
+    Repairer repairer;
+    repairer.repair(
+        plan,
+        requests,
+        engineers
+    );
 
-    // Метрики
     calculateMetrics(plan);
 
     return plan;
 }
-
-
-// ============================================================
-// Replanning
-// ============================================================
 
 Plan Planner::replan(
     const std::vector<Request>& requests,
     const std::vector<Engineer>& engineers,
     const Event& event
 ) {
-    std::vector<Request>
-        updatedRequests =
-            requests;
+    std::vector<Request> updatedRequests = requests;
 
-
-    // --------------------------------------------------------
-    // Срочная новая заявка
-    // --------------------------------------------------------
-
-    if (event.type ==
-        EventType::UrgentRequest) {
-
+    if (event.type == EventType::UrgentRequest) {
         if (event.newRequest.has_value()) {
-
             updatedRequests.push_back(
                 event.newRequest.value()
             );
         }
     }
-
-
-    // --------------------------------------------------------
-    // Отмена заявки
-    // --------------------------------------------------------
-
-    else if (
-        event.type ==
-        EventType::CancelRequest
-    ) {
-
+    else if (event.type == EventType::CancelRequest) {
         if (event.requestId.has_value()) {
-
             updatedRequests.erase(
                 std::remove_if(
                     updatedRequests.begin(),
                     updatedRequests.end(),
-
                     [&](const Request& request) {
-
                         return request.id ==
                                event.requestId.value();
                     }
                 ),
-
                 updatedRequests.end()
             );
         }
     }
-
-
-    // --------------------------------------------------------
-    // Пока EngineerUnavailable
-    // просто пересчитываем план.
-    // Более сложную логику добавим позже.
-    // --------------------------------------------------------
 
     return solve(
         updatedRequests,

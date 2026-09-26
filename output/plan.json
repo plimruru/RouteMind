@@ -1,9 +1,1256 @@
 {
     "metrics": {
-        "engineers_used": 0,
-        "total_distance_km": 0.0
+        "engineers_used": 35,
+        "total_distance_km": 2076.816252712242
     },
-    "routes": [],
+    "routes": [
+        {
+            "engineer_id": "Восток_Бригада Арташкин",
+            "requests": [
+                {
+                    "arrival_time": 590,
+                    "distance_from_previous_km": 91.52703650307622,
+                    "finish_time": 660,
+                    "request_id": "40111",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 733,
+                    "distance_from_previous_km": 60.05321319316972,
+                    "finish_time": 793,
+                    "request_id": "46199",
+                    "start_time": 733
+                },
+                {
+                    "arrival_time": 820,
+                    "distance_from_previous_km": 22.100695643249598,
+                    "finish_time": 900,
+                    "request_id": "63591",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 922,
+                    "distance_from_previous_km": 18.313053062723572,
+                    "finish_time": 1020,
+                    "request_id": "86864",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1027,
+                    "distance_from_previous_km": 5.50307488263076,
+                    "finish_time": 1140,
+                    "request_id": "94575",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 197.49707328484988,
+            "total_travel_minutes": 239
+        },
+        {
+            "engineer_id": "Восток_Бригада Белузин",
+            "requests": [
+                {
+                    "arrival_time": 485,
+                    "distance_from_previous_km": 3.8729797817530787,
+                    "finish_time": 660,
+                    "request_id": "50219",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 667,
+                    "distance_from_previous_km": 5.051214284943193,
+                    "finish_time": 780,
+                    "request_id": "48227",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 781,
+                    "distance_from_previous_km": 0.2073041213635153,
+                    "finish_time": 900,
+                    "request_id": "22634",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 913,
+                    "distance_from_previous_km": 10.185377170274563,
+                    "finish_time": 1140,
+                    "request_id": "92031",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 19.31687535833435,
+            "total_travel_minutes": 26
+        },
+        {
+            "engineer_id": "Восток_Бригада Гусаковский",
+            "requests": [
+                {
+                    "arrival_time": 528,
+                    "distance_from_previous_km": 3.9963691604305236,
+                    "finish_time": 660,
+                    "request_id": "33527",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 715,
+                    "distance_from_previous_km": 4.506135386410891,
+                    "finish_time": 780,
+                    "request_id": "24076",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 822,
+                    "distance_from_previous_km": 3.462740632917239,
+                    "finish_time": 1020,
+                    "request_id": "26645",
+                    "start_time": 960
+                }
+            ],
+            "total_distance_km": 11.965245179758654,
+            "total_travel_minutes": 145
+        },
+        {
+            "engineer_id": "Восток_Бригада Зверев",
+            "requests": [
+                {
+                    "arrival_time": 517,
+                    "distance_from_previous_km": 30.361947567857115,
+                    "finish_time": 660,
+                    "request_id": "66944",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 753,
+                    "distance_from_previous_km": 76.9294865155414,
+                    "finish_time": 813,
+                    "request_id": "3151",
+                    "start_time": 753
+                },
+                {
+                    "arrival_time": 820,
+                    "distance_from_previous_km": 5.591350476471718,
+                    "finish_time": 900,
+                    "request_id": "20362",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 1009,
+                    "distance_from_previous_km": 90.62022608918632,
+                    "finish_time": 1069,
+                    "request_id": "68359",
+                    "start_time": 1009
+                },
+                {
+                    "arrival_time": 1087,
+                    "distance_from_previous_km": 14.362453591259351,
+                    "finish_time": 1147,
+                    "request_id": "66376",
+                    "start_time": 1087
+                }
+            ],
+            "total_distance_km": 217.86546424031587,
+            "total_travel_minutes": 264
+        },
+        {
+            "engineer_id": "Восток_Бригада Каушнян",
+            "requests": [
+                {
+                    "arrival_time": 600,
+                    "distance_from_previous_km": 99.64747990000828,
+                    "finish_time": 660,
+                    "request_id": "62011",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 667,
+                    "distance_from_previous_km": 5.808590037146345,
+                    "finish_time": 727,
+                    "request_id": "98998",
+                    "start_time": 667
+                },
+                {
+                    "arrival_time": 730,
+                    "distance_from_previous_km": 2.1555335912666815,
+                    "finish_time": 790,
+                    "request_id": "23094",
+                    "start_time": 730
+                },
+                {
+                    "arrival_time": 796,
+                    "distance_from_previous_km": 4.904630616363253,
+                    "finish_time": 856,
+                    "request_id": "51774",
+                    "start_time": 796
+                },
+                {
+                    "arrival_time": 864,
+                    "distance_from_previous_km": 6.050690904008906,
+                    "finish_time": 924,
+                    "request_id": "90915",
+                    "start_time": 864
+                },
+                {
+                    "arrival_time": 925,
+                    "distance_from_previous_km": 0.07857271132406955,
+                    "finish_time": 985,
+                    "request_id": "45243",
+                    "start_time": 925
+                },
+                {
+                    "arrival_time": 1004,
+                    "distance_from_previous_km": 15.268059060656979,
+                    "finish_time": 1064,
+                    "request_id": "81698",
+                    "start_time": 1004
+                },
+                {
+                    "arrival_time": 1078,
+                    "distance_from_previous_km": 11.323199403528587,
+                    "finish_time": 1138,
+                    "request_id": "65034",
+                    "start_time": 1078
+                }
+            ],
+            "total_distance_km": 145.23675622430306,
+            "total_travel_minutes": 178
+        },
+        {
+            "engineer_id": "Восток_Бригада Комарь",
+            "requests": [
+                {
+                    "arrival_time": 614,
+                    "distance_from_previous_km": 11.142296431631017,
+                    "finish_time": 674,
+                    "request_id": "5406",
+                    "start_time": 614
+                },
+                {
+                    "arrival_time": 778,
+                    "distance_from_previous_km": 8.631313192572106,
+                    "finish_time": 838,
+                    "request_id": "2915",
+                    "start_time": 778
+                },
+                {
+                    "arrival_time": 957,
+                    "distance_from_previous_km": 9.841410864779066,
+                    "finish_time": 1020,
+                    "request_id": "87693",
+                    "start_time": 960
+                }
+            ],
+            "total_distance_km": 29.61502048898219,
+            "total_travel_minutes": 357
+        },
+        {
+            "engineer_id": "Восток_Бригада Матвеев",
+            "requests": [
+                {
+                    "arrival_time": 594,
+                    "distance_from_previous_km": 9.446676259711776,
+                    "finish_time": 660,
+                    "request_id": "58129",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 686,
+                    "distance_from_previous_km": 2.0836973537079664,
+                    "finish_time": 780,
+                    "request_id": "78920",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 807,
+                    "distance_from_previous_km": 2.183514603181001,
+                    "finish_time": 900,
+                    "request_id": "32066",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 985,
+                    "distance_from_previous_km": 7.04509259879213,
+                    "finish_time": 1045,
+                    "request_id": "90709",
+                    "start_time": 985
+                }
+            ],
+            "total_distance_km": 20.758980815392874,
+            "total_travel_minutes": 252
+        },
+        {
+            "engineer_id": "Восток_Бригада Мельников",
+            "requests": [
+                {
+                    "arrival_time": 494,
+                    "distance_from_previous_km": 11.652822257520295,
+                    "finish_time": 660,
+                    "request_id": "16024",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 680,
+                    "distance_from_previous_km": 15.89635401399714,
+                    "finish_time": 780,
+                    "request_id": "58066",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 781,
+                    "distance_from_previous_km": 0.47679878697462835,
+                    "finish_time": 900,
+                    "request_id": "2245",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 917,
+                    "distance_from_previous_km": 13.584636526904504,
+                    "finish_time": 1020,
+                    "request_id": "76944",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1032,
+                    "distance_from_previous_km": 9.487667463586508,
+                    "finish_time": 1140,
+                    "request_id": "50104",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 51.09827904898307,
+            "total_travel_minutes": 64
+        },
+        {
+            "engineer_id": "Восток_Бригада Перов",
+            "requests": [
+                {
+                    "arrival_time": 485,
+                    "distance_from_previous_km": 2.005835685853813,
+                    "finish_time": 660,
+                    "request_id": "32807",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 668,
+                    "distance_from_previous_km": 3.5746043229543676,
+                    "finish_time": 780,
+                    "request_id": "29890",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 788,
+                    "distance_from_previous_km": 3.5453339226590534,
+                    "finish_time": 900,
+                    "request_id": "47330",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 933,
+                    "distance_from_previous_km": 16.197645455793356,
+                    "finish_time": 1020,
+                    "request_id": "14416",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1045,
+                    "distance_from_previous_km": 12.008234845054972,
+                    "finish_time": 1140,
+                    "request_id": "6185",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 37.33165423231556,
+            "total_travel_minutes": 79
+        },
+        {
+            "engineer_id": "Восток_Бригада Попов",
+            "requests": [
+                {
+                    "arrival_time": 502,
+                    "distance_from_previous_km": 5.353273263024678,
+                    "finish_time": 660,
+                    "request_id": "98182",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 687,
+                    "distance_from_previous_km": 6.647375035541346,
+                    "finish_time": 780,
+                    "request_id": "3566",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 824,
+                    "distance_from_previous_km": 10.779093357879697,
+                    "finish_time": 1140,
+                    "request_id": "48174",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 22.779741656445722,
+            "total_travel_minutes": 93
+        },
+        {
+            "engineer_id": "Восток_Бригада Свеженцев",
+            "requests": [
+                {
+                    "arrival_time": 527,
+                    "distance_from_previous_km": 11.574086169321784,
+                    "finish_time": 660,
+                    "request_id": "20263",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 686,
+                    "distance_from_previous_km": 6.306622683447795,
+                    "finish_time": 780,
+                    "request_id": "84074",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 819,
+                    "distance_from_previous_km": 9.611474214320559,
+                    "finish_time": 1020,
+                    "request_id": "15648",
+                    "start_time": 960
+                }
+            ],
+            "total_distance_km": 27.49218306709014,
+            "total_travel_minutes": 112
+        },
+        {
+            "engineer_id": "Восток_Бригада Соколов",
+            "requests": [
+                {
+                    "arrival_time": 483,
+                    "distance_from_previous_km": 2.178561952201567,
+                    "finish_time": 660,
+                    "request_id": "34366",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 661,
+                    "distance_from_previous_km": 0.38181401787592956,
+                    "finish_time": 780,
+                    "request_id": "53587",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 795,
+                    "distance_from_previous_km": 12.40374323653355,
+                    "finish_time": 900,
+                    "request_id": "18023",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 911,
+                    "distance_from_previous_km": 8.45894686781702,
+                    "finish_time": 1020,
+                    "request_id": "41962",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1042,
+                    "distance_from_previous_km": 18.11017917635756,
+                    "finish_time": 1140,
+                    "request_id": "84466",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 41.533245250785626,
+            "total_travel_minutes": 52
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Андреев",
+            "requests": [
+                {
+                    "arrival_time": 495,
+                    "distance_from_previous_km": 12.032365974208261,
+                    "finish_time": 660,
+                    "request_id": "46513",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 668,
+                    "distance_from_previous_km": 6.053713540430303,
+                    "finish_time": 780,
+                    "request_id": "10776",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 789,
+                    "distance_from_previous_km": 6.822283921913232,
+                    "finish_time": 900,
+                    "request_id": "11872",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 914,
+                    "distance_from_previous_km": 11.658501761096698,
+                    "finish_time": 1020,
+                    "request_id": "47560",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1039,
+                    "distance_from_previous_km": 15.61792493165966,
+                    "finish_time": 1140,
+                    "request_id": "33507",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 52.184790129308155,
+            "total_travel_minutes": 65
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Белоновский",
+            "requests": [
+                {
+                    "arrival_time": 491,
+                    "distance_from_previous_km": 5.043128172637888,
+                    "finish_time": 660,
+                    "request_id": "93798",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 662,
+                    "distance_from_previous_km": 0.5898224074083857,
+                    "finish_time": 780,
+                    "request_id": "63894",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 788,
+                    "distance_from_previous_km": 3.9235456925395384,
+                    "finish_time": 1020,
+                    "request_id": "54422",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1048,
+                    "distance_from_previous_km": 13.854373155051135,
+                    "finish_time": 1140,
+                    "request_id": "99841",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 23.410869427636946,
+            "total_travel_minutes": 49
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Бузань",
+            "requests": [
+                {
+                    "arrival_time": 483,
+                    "distance_from_previous_km": 1.7322865101908291,
+                    "finish_time": 660,
+                    "request_id": "11899",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 683,
+                    "distance_from_previous_km": 18.389135432653347,
+                    "finish_time": 780,
+                    "request_id": "55454",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 865,
+                    "distance_from_previous_km": 70.10563774179415,
+                    "finish_time": 925,
+                    "request_id": "53552",
+                    "start_time": 865
+                },
+                {
+                    "arrival_time": 1012,
+                    "distance_from_previous_km": 72.45197276287946,
+                    "finish_time": 1072,
+                    "request_id": "67472",
+                    "start_time": 1012
+                },
+                {
+                    "arrival_time": 1098,
+                    "distance_from_previous_km": 21.619841110939095,
+                    "finish_time": 1158,
+                    "request_id": "51603",
+                    "start_time": 1098
+                }
+            ],
+            "total_distance_km": 184.29887355845688,
+            "total_travel_minutes": 224
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Горбанев",
+            "requests": [
+                {
+                    "arrival_time": 485,
+                    "distance_from_previous_km": 4.061099842711601,
+                    "finish_time": 660,
+                    "request_id": "44117",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 666,
+                    "distance_from_previous_km": 4.849783435014615,
+                    "finish_time": 780,
+                    "request_id": "60141",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 785,
+                    "distance_from_previous_km": 4.066195324172677,
+                    "finish_time": 1140,
+                    "request_id": "2427",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 12.977078601898894,
+            "total_travel_minutes": 16
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Демин",
+            "requests": [
+                {
+                    "arrival_time": 496,
+                    "distance_from_previous_km": 13.312630463348736,
+                    "finish_time": 900,
+                    "request_id": "48238",
+                    "start_time": 840
+                }
+            ],
+            "total_distance_km": 13.312630463348736,
+            "total_travel_minutes": 16
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Каушнян",
+            "requests": [
+                {
+                    "arrival_time": 605,
+                    "distance_from_previous_km": 10.384240673082976,
+                    "finish_time": 665,
+                    "request_id": "23142",
+                    "start_time": 605
+                },
+                {
+                    "arrival_time": 742,
+                    "distance_from_previous_km": 6.400275337457717,
+                    "finish_time": 802,
+                    "request_id": "41077",
+                    "start_time": 742
+                },
+                {
+                    "arrival_time": 854,
+                    "distance_from_previous_km": 4.263266463549829,
+                    "finish_time": 1020,
+                    "request_id": "35675",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1072,
+                    "distance_from_previous_km": 4.289113884501943,
+                    "finish_time": 1140,
+                    "request_id": "86160",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 25.336896358592465,
+            "total_travel_minutes": 306
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Козырь",
+            "requests": [
+                {
+                    "arrival_time": 521,
+                    "distance_from_previous_km": 20.236660037763013,
+                    "finish_time": 660,
+                    "request_id": "76678",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 876,
+                    "distance_from_previous_km": 107.71030484153498,
+                    "finish_time": 936,
+                    "request_id": "45778",
+                    "start_time": 876
+                },
+                {
+                    "arrival_time": 948,
+                    "distance_from_previous_km": 5.513648042492284,
+                    "finish_time": 1008,
+                    "request_id": "97168",
+                    "start_time": 948
+                }
+            ],
+            "total_distance_km": 133.46061292179027,
+            "total_travel_minutes": 269
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Макаров",
+            "requests": [
+                {
+                    "arrival_time": 504,
+                    "distance_from_previous_km": 19.5411952077047,
+                    "finish_time": 660,
+                    "request_id": "75745",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 745,
+                    "distance_from_previous_km": 70.69203860947613,
+                    "finish_time": 805,
+                    "request_id": "57353",
+                    "start_time": 745
+                },
+                {
+                    "arrival_time": 886,
+                    "distance_from_previous_km": 67.46778961001198,
+                    "finish_time": 946,
+                    "request_id": "89696",
+                    "start_time": 886
+                },
+                {
+                    "arrival_time": 978,
+                    "distance_from_previous_km": 26.169153526170717,
+                    "finish_time": 1140,
+                    "request_id": "89067",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 183.8701769533635,
+            "total_travel_minutes": 222
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Паршин",
+            "requests": [
+                {
+                    "arrival_time": 500,
+                    "distance_from_previous_km": 9.980757682194747,
+                    "finish_time": 660,
+                    "request_id": "94447",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 676,
+                    "distance_from_previous_km": 7.9155212599063915,
+                    "finish_time": 780,
+                    "request_id": "7939",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 843,
+                    "distance_from_previous_km": 31.326153169241472,
+                    "finish_time": 903,
+                    "request_id": "13583",
+                    "start_time": 843
+                },
+                {
+                    "arrival_time": 1049,
+                    "distance_from_previous_km": 72.58333058970874,
+                    "finish_time": 1109,
+                    "request_id": "78673",
+                    "start_time": 1049
+                }
+            ],
+            "total_distance_km": 121.80576270105135,
+            "total_travel_minutes": 245
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Рыбин",
+            "requests": [
+                {
+                    "arrival_time": 482,
+                    "distance_from_previous_km": 1.5868845074751636,
+                    "finish_time": 660,
+                    "request_id": "23807",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 667,
+                    "distance_from_previous_km": 5.556231735121997,
+                    "finish_time": 780,
+                    "request_id": "19216",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 788,
+                    "distance_from_previous_km": 6.095526224537915,
+                    "finish_time": 1020,
+                    "request_id": "64168",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1038,
+                    "distance_from_previous_km": 14.972235855242293,
+                    "finish_time": 1140,
+                    "request_id": "30243",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 28.21087832237737,
+            "total_travel_minutes": 35
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Саламатин",
+            "requests": [
+                {
+                    "arrival_time": 581,
+                    "distance_from_previous_km": 8.388834564562732,
+                    "finish_time": 660,
+                    "request_id": "12263",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 776,
+                    "distance_from_previous_km": 9.662791815054673,
+                    "finish_time": 836,
+                    "request_id": "79719",
+                    "start_time": 776
+                },
+                {
+                    "arrival_time": 884,
+                    "distance_from_previous_km": 3.9434918869428697,
+                    "finish_time": 944,
+                    "request_id": "86002",
+                    "start_time": 884
+                },
+                {
+                    "arrival_time": 987,
+                    "distance_from_previous_km": 3.5606462059661976,
+                    "finish_time": 1047,
+                    "request_id": "19376",
+                    "start_time": 987
+                },
+                {
+                    "arrival_time": 1058,
+                    "distance_from_previous_km": 0.8485574490156806,
+                    "finish_time": 1140,
+                    "request_id": "27023",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 26.40432192154215,
+            "total_travel_minutes": 319
+        },
+        {
+            "engineer_id": "Юго-восток_Бригада Царьков",
+            "requests": [
+                {
+                    "arrival_time": 534,
+                    "distance_from_previous_km": 4.4373783035460495,
+                    "finish_time": 660,
+                    "request_id": "65717",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 733,
+                    "distance_from_previous_km": 6.066402687739646,
+                    "finish_time": 793,
+                    "request_id": "90373",
+                    "start_time": 733
+                },
+                {
+                    "arrival_time": 843,
+                    "distance_from_previous_km": 4.155009160226153,
+                    "finish_time": 903,
+                    "request_id": "30769",
+                    "start_time": 843
+                },
+                {
+                    "arrival_time": 941,
+                    "distance_from_previous_km": 3.1389524988689574,
+                    "finish_time": 1020,
+                    "request_id": "61540",
+                    "start_time": 960
+                }
+            ],
+            "total_distance_km": 17.797742650380805,
+            "total_travel_minutes": 215
+        },
+        {
+            "engineer_id": "Югоцентр_Бахарев Андрей",
+            "requests": [
+                {
+                    "arrival_time": 489,
+                    "distance_from_previous_km": 7.41012591910856,
+                    "finish_time": 660,
+                    "request_id": "6957",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 666,
+                    "distance_from_previous_km": 4.339429147287667,
+                    "finish_time": 780,
+                    "request_id": "79450",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 784,
+                    "distance_from_previous_km": 2.5946405003897386,
+                    "finish_time": 900,
+                    "request_id": "87819",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 904,
+                    "distance_from_previous_km": 2.5946405003897386,
+                    "finish_time": 1140,
+                    "request_id": "26896",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 16.938836067175703,
+            "total_travel_minutes": 23
+        },
+        {
+            "engineer_id": "Югоцентр_Брюзгин Ярослав",
+            "requests": [
+                {
+                    "arrival_time": 492,
+                    "distance_from_previous_km": 9.864332317781503,
+                    "finish_time": 660,
+                    "request_id": "74949",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 663,
+                    "distance_from_previous_km": 1.9337300299186706,
+                    "finish_time": 780,
+                    "request_id": "94409",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 796,
+                    "distance_from_previous_km": 12.620010329796717,
+                    "finish_time": 900,
+                    "request_id": "13203",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 903,
+                    "distance_from_previous_km": 2.0582856982393247,
+                    "finish_time": 1140,
+                    "request_id": "77795",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 26.476358375736215,
+            "total_travel_minutes": 34
+        },
+        {
+            "engineer_id": "Югоцентр_Выговский Сергей",
+            "requests": [
+                {
+                    "arrival_time": 491,
+                    "distance_from_previous_km": 8.742234813179003,
+                    "finish_time": 660,
+                    "request_id": "37272",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 662,
+                    "distance_from_previous_km": 1.1519608231639895,
+                    "finish_time": 780,
+                    "request_id": "23380",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 782,
+                    "distance_from_previous_km": 0.9746993542606075,
+                    "finish_time": 900,
+                    "request_id": "17349",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 906,
+                    "distance_from_previous_km": 4.598041587806481,
+                    "finish_time": 1020,
+                    "request_id": "97886",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1040,
+                    "distance_from_previous_km": 16.40830911695598,
+                    "finish_time": 1140,
+                    "request_id": "36961",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 31.87524569536606,
+            "total_travel_minutes": 41
+        },
+        {
+            "engineer_id": "Югоцентр_Данилов Даниил",
+            "requests": [
+                {
+                    "arrival_time": 501,
+                    "distance_from_previous_km": 10.38722269209294,
+                    "finish_time": 660,
+                    "request_id": "876",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 700,
+                    "distance_from_previous_km": 19.542859201082106,
+                    "finish_time": 780,
+                    "request_id": "93544",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 800,
+                    "distance_from_previous_km": 9.523375967683222,
+                    "finish_time": 900,
+                    "request_id": "71388",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 918,
+                    "distance_from_previous_km": 8.582290656108055,
+                    "finish_time": 1020,
+                    "request_id": "68946",
+                    "start_time": 960
+                }
+            ],
+            "total_distance_km": 48.03574851696632,
+            "total_travel_minutes": 99
+        },
+        {
+            "engineer_id": "Югоцентр_Ионов Геннадий",
+            "requests": [
+                {
+                    "arrival_time": 595,
+                    "distance_from_previous_km": 9.53934318636281,
+                    "finish_time": 660,
+                    "request_id": "95692",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 661,
+                    "distance_from_previous_km": 0.0,
+                    "finish_time": 780,
+                    "request_id": "60720",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 897,
+                    "distance_from_previous_km": 9.726773710483094,
+                    "finish_time": 957,
+                    "request_id": "73572",
+                    "start_time": 897
+                }
+            ],
+            "total_distance_km": 19.266116896845904,
+            "total_travel_minutes": 233
+        },
+        {
+            "engineer_id": "Югоцентр_Исхаков Денис",
+            "requests": [
+                {
+                    "arrival_time": 538,
+                    "distance_from_previous_km": 28.69858081315592,
+                    "finish_time": 660,
+                    "request_id": "63577",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 736,
+                    "distance_from_previous_km": 37.67579648072457,
+                    "finish_time": 796,
+                    "request_id": "4893",
+                    "start_time": 736
+                },
+                {
+                    "arrival_time": 806,
+                    "distance_from_previous_km": 4.7025412264499495,
+                    "finish_time": 1020,
+                    "request_id": "61311",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1037,
+                    "distance_from_previous_km": 8.387281686109747,
+                    "finish_time": 1140,
+                    "request_id": "51115",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 79.46420020644018,
+            "total_travel_minutes": 161
+        },
+        {
+            "engineer_id": "Югоцентр_Капитанчук Александр",
+            "requests": [
+                {
+                    "arrival_time": 505,
+                    "distance_from_previous_km": 12.186138908628864,
+                    "finish_time": 660,
+                    "request_id": "52405",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 691,
+                    "distance_from_previous_km": 15.466968330382048,
+                    "finish_time": 780,
+                    "request_id": "55711",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 837,
+                    "distance_from_previous_km": 28.463299966491153,
+                    "finish_time": 900,
+                    "request_id": "35057",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 957,
+                    "distance_from_previous_km": 28.343373923687434,
+                    "finish_time": 1020,
+                    "request_id": "80548",
+                    "start_time": 960
+                },
+                {
+                    "arrival_time": 1037,
+                    "distance_from_previous_km": 8.095958916608646,
+                    "finish_time": 1140,
+                    "request_id": "21571",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 92.55574004579816,
+            "total_travel_minutes": 187
+        },
+        {
+            "engineer_id": "Югоцентр_Переладов Алексей",
+            "requests": [
+                {
+                    "arrival_time": 492,
+                    "distance_from_previous_km": 9.5172428199557,
+                    "finish_time": 660,
+                    "request_id": "14494",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 674,
+                    "distance_from_previous_km": 11.08199782348345,
+                    "finish_time": 780,
+                    "request_id": "19203",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 781,
+                    "distance_from_previous_km": 0.0,
+                    "finish_time": 900,
+                    "request_id": "17896",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 905,
+                    "distance_from_previous_km": 4.046525554844319,
+                    "finish_time": 1140,
+                    "request_id": "92618",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 24.645766198283468,
+            "total_travel_minutes": 32
+        },
+        {
+            "engineer_id": "Югоцентр_Прокопенко Вячеслав",
+            "requests": [
+                {
+                    "arrival_time": 516,
+                    "distance_from_previous_km": 8.84918111481367,
+                    "finish_time": 660,
+                    "request_id": "79707",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 688,
+                    "distance_from_previous_km": 6.944351617790065,
+                    "finish_time": 780,
+                    "request_id": "51133",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 797,
+                    "distance_from_previous_km": 4.195485034338835,
+                    "finish_time": 1140,
+                    "request_id": "76643",
+                    "start_time": 1080
+                }
+            ],
+            "total_distance_km": 19.989017766942567,
+            "total_travel_minutes": 81
+        },
+        {
+            "engineer_id": "Югоцентр_Рыбалкин Егор",
+            "requests": [
+                {
+                    "arrival_time": 485,
+                    "distance_from_previous_km": 3.4319192647091445,
+                    "finish_time": 660,
+                    "request_id": "94431",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 665,
+                    "distance_from_previous_km": 3.929244756981442,
+                    "finish_time": 780,
+                    "request_id": "76452",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 784,
+                    "distance_from_previous_km": 3.1952917839326647,
+                    "finish_time": 900,
+                    "request_id": "75881",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 934,
+                    "distance_from_previous_km": 28.147033573312097,
+                    "finish_time": 1020,
+                    "request_id": "90989",
+                    "start_time": 960
+                }
+            ],
+            "total_distance_km": 38.703489378935345,
+            "total_travel_minutes": 48
+        },
+        {
+            "engineer_id": "Югоцентр_Сакур Тимофей",
+            "requests": [
+                {
+                    "arrival_time": 492,
+                    "distance_from_previous_km": 9.53934318636281,
+                    "finish_time": 660,
+                    "request_id": "79144",
+                    "start_time": 600
+                },
+                {
+                    "arrival_time": 671,
+                    "distance_from_previous_km": 9.144059749856131,
+                    "finish_time": 780,
+                    "request_id": "67554",
+                    "start_time": 720
+                },
+                {
+                    "arrival_time": 783,
+                    "distance_from_previous_km": 1.9725365524227627,
+                    "finish_time": 900,
+                    "request_id": "57866",
+                    "start_time": 840
+                },
+                {
+                    "arrival_time": 916,
+                    "distance_from_previous_km": 12.64864121780642,
+                    "finish_time": 1020,
+                    "request_id": "66315",
+                    "start_time": 960
+                }
+            ],
+            "total_distance_km": 33.30458070644812,
+            "total_travel_minutes": 42
+        }
+    ],
     "unassigned": [
         {
             "reason": "Missing geolocation",
@@ -14,8 +1261,116 @@
             "request_id": "78540"
         },
         {
-            "reason": "No feasible time slot",
-            "request_id": "66376"
+            "reason": "Missing geolocation",
+            "request_id": "85188"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "26845"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "93276"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "35265"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "52041"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "60484"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "76173"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "72476"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "7660"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "33880"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "37590"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "75282"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "4724"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "12329"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "20055"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "32589"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "1287"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "31495"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "10135"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "18754"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "82388"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "10245"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "82808"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "98815"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "17892"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "41912"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "68476"
+        },
+        {
+            "reason": "Missing geolocation",
+            "request_id": "24980"
         },
         {
             "reason": "No feasible time slot",
@@ -27,95 +1382,7 @@
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "55711"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "76944"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "75881"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "85188"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "19376"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "6185"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "80548"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "76452"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "47560"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "79707"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "23142"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "10776"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "94447"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "94575"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "94431"
-        },
-        {
-            "reason": "No feasible time slot",
             "request_id": "52576"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "66315"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "93544"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "19203"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "16024"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "90373"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "79719"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "6957"
         },
         {
             "reason": "No feasible time slot",
@@ -127,15 +1394,7 @@
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "27023"
-        },
-        {
-            "reason": "No feasible time slot",
             "request_id": "26177"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "77795"
         },
         {
             "reason": "No feasible time slot",
@@ -143,375 +1402,35 @@
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "99841"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "20263"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "51133"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "90709"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "84074"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "12263"
-        },
-        {
-            "reason": "No feasible time slot",
             "request_id": "95501"
         },
         {
-            "reason": "No feasible time slot",
-            "request_id": "86002"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "92618"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "26845"
-        },
-        {
-            "reason": "No feasible time slot",
+            "reason": "No engineer satisfies all skill, specialization and transport requirements",
             "request_id": "80308"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "93276"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "61311"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "46513"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "35265"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "13203"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "26896"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "87819"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "5406"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "86864"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "17896"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "18023"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "67472"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "84466"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "14416"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "68359"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "66944"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "52041"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "23807"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "60484"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "63591"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "53552"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "58066"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "2915"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "3566"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "68946"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "55454"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "35057"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "75745"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "65717"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "44117"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "76173"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "876"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "62011"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "57353"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "2245"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "14494"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "78920"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "78876"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "23094"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "79144"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "60141"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "79450"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "58129"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "93798"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "89696"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "20362"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "40698"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "2427"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "51603"
         },
         {
             "reason": "No feasible time slot",
             "request_id": "13404"
         },
         {
-            "reason": "Missing geolocation",
-            "request_id": "72476"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "90989"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "7660"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "89067"
-        },
-        {
             "reason": "No feasible time slot",
             "request_id": "65268"
         },
         {
-            "reason": "Missing geolocation",
-            "request_id": "33880"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "37590"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "33507"
-        },
-        {
-            "reason": "No feasible time slot",
+            "reason": "No engineer satisfies all skill, specialization and transport requirements",
             "request_id": "88209"
         },
         {
-            "reason": "No feasible time slot",
+            "reason": "No engineer satisfies all skill, specialization and transport requirements",
             "request_id": "24482"
         },
         {
-            "reason": "No feasible time slot",
-            "request_id": "40111"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "46199"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "75282"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "63577"
-        },
-        {
-            "reason": "No feasible time slot",
+            "reason": "No engineer satisfies all skill, specialization and transport requirements",
             "request_id": "7610"
         },
         {
-            "reason": "No feasible time slot",
-            "request_id": "19216"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "11872"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "54422"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "4724"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "11899"
-        },
-        {
-            "reason": "No feasible time slot",
+            "reason": "No engineer satisfies all skill, specialization and transport requirements",
             "request_id": "60886"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "32066"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "63894"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "64168"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "40919"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "36961"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "12329"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "95692"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "13583"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "3151"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "45778"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "20055"
         },
         {
             "reason": "No feasible time slot",
@@ -519,71 +1438,11 @@
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "78673"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "98998"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "32589"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "51774"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "90915"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "45243"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "81698"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "97168"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "65034"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "1287"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "31495"
-        },
-        {
-            "reason": "No feasible time slot",
             "request_id": "74198"
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "86160"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "50104"
-        },
-        {
-            "reason": "No feasible time slot",
             "request_id": "46393"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "10135"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "18754"
         },
         {
             "reason": "No feasible time slot",
@@ -591,219 +1450,27 @@
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "61540"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "74949"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "41077"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "87693"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "93086"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "57866"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "35675"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "82388"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "23380"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "37272"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "71388"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "34366"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "67554"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "94409"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "10245"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "52405"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "30769"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "98182"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "76082"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "29890"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "77563"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "53587"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "82808"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "7939"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "92031"
-        },
-        {
-            "reason": "No feasible time slot",
             "request_id": "31260"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "69967"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "22634"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "98815"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "33527"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "21571"
         },
         {
             "reason": "No feasible time slot",
             "request_id": "47670"
         },
         {
-            "reason": "Missing geolocation",
-            "request_id": "17892"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "51115"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "76643"
-        },
-        {
-            "reason": "No feasible time slot",
+            "reason": "No engineer satisfies all skill, specialization and transport requirements",
             "request_id": "43506"
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "48174"
+            "request_id": "21367"
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "48227"
+            "request_id": "57299"
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "60720"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "48238"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "41912"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "4893"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "68476"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "50219"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "76678"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "47330"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "26645"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "24076"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "30243"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "32807"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "73572"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "41962"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "97886"
-        },
-        {
-            "reason": "No feasible time slot",
-            "request_id": "17349"
+            "request_id": "40919"
         },
         {
             "reason": "No feasible time slot",
@@ -811,19 +1478,27 @@
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "21367"
-        },
-        {
-            "reason": "Missing geolocation",
-            "request_id": "24980"
+            "request_id": "76082"
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "15648"
+            "request_id": "78876"
         },
         {
             "reason": "No feasible time slot",
-            "request_id": "57299"
+            "request_id": "77563"
+        },
+        {
+            "reason": "No feasible time slot",
+            "request_id": "69967"
+        },
+        {
+            "reason": "No feasible time slot",
+            "request_id": "40698"
+        },
+        {
+            "reason": "No feasible time slot",
+            "request_id": "93086"
         }
     ]
 }

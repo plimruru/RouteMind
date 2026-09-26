@@ -18,6 +18,7 @@ add_executable(route_planner
     cpp/src/main.cpp
 
     cpp/src/planner/Planner.cpp
+    cpp/src/planner/Repairer.cpp
     cpp/src/planner/Scheduler.cpp
 
     cpp/src/routing/Router.cpp

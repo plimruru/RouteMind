@@ -110,6 +110,48 @@ loadRequestLocations(
     return locations;
 }
 
+std::unordered_map<std::string, Point>
+loadBrigadeLocations(
+    const std::string& path
+) {
+    std::ifstream file(path);
+
+    if (!file.is_open()) {
+        throw std::runtime_error(
+            "Cannot open brigade locations file: " + path
+        );
+    }
+
+    json data;
+    file >> data;
+
+    std::unordered_map<std::string, Point>
+        locations;
+
+    for (const auto& item : data) {
+
+        const std::string address =
+            item.at("address")
+                .get<std::string>();
+
+        const double latitude =
+            item.at("latitude")
+                .get<double>();
+
+        const double longitude =
+            item.at("longitude")
+                .get<double>();
+
+        locations[address] =
+            Point{
+                latitude,
+                longitude
+            };
+    }
+
+    return locations;
+}
+
 } // namespace
 
 
@@ -303,41 +345,51 @@ JsonLoader::loadEngineers(
     json data;
     file >> data;
 
+    const auto brigadeLocations =
+        loadBrigadeLocations(
+            "data/brigade_locations.json"
+        );
+
+    std::cout
+        << "Loaded brigade location mappings: "
+        << brigadeLocations.size()
+        << "\n";
+
     std::vector<Engineer> engineers;
 
     for (const auto& item : data) {
 
         Engineer engineer;
 
-        // ----------------------------------------------------
-        // ID
-        // ----------------------------------------------------
-
         engineer.id =
             item.at("brigade_id")
                 .get<std::string>();
-
-
-        // ----------------------------------------------------
-        // Name
-        // ----------------------------------------------------
 
         engineer.name =
             item.at("brigade_name")
                 .get<std::string>();
 
+        const std::string startAddress =
+            item.value("start_address", "");
 
-        // ----------------------------------------------------
-        // Пока координаты инженеров неизвестны.
-        // ----------------------------------------------------
+        auto brigadeLocationIt =
+            brigadeLocations.find(startAddress);
 
-        engineer.startLocation =
-            Point{0.0, 0.0};
+        if (brigadeLocationIt != brigadeLocations.end()) {
 
+            engineer.startLocation =
+                brigadeLocationIt->second;
 
-        // ----------------------------------------------------
-        // Временная смена
-        // ----------------------------------------------------
+        } else {
+
+            engineer.startLocation =
+                Point{0.0, 0.0};
+
+            std::cerr
+                << "Warning: no coordinates for engineer start address: "
+                << startAddress
+                << "\n";
+        }
 
         engineer.shiftStart =
             8 * 60;
@@ -345,21 +397,11 @@ JsonLoader::loadEngineers(
         engineer.shiftEnd =
             20 * 60;
 
-
-        // ----------------------------------------------------
-        // Transport
-        // ----------------------------------------------------
-
         engineer.transport =
             parseTransport(
                 item.at("transport")
                     .get<std::string>()
             );
-
-
-        // ----------------------------------------------------
-        // Skills
-        // ----------------------------------------------------
 
         for (const auto& skill :
              item.at("skills")) {
@@ -370,11 +412,6 @@ JsonLoader::loadEngineers(
                 )
             );
         }
-
-
-        // ----------------------------------------------------
-        // Specializations
-        // ----------------------------------------------------
 
         if (item.contains("specializations")) {
 
@@ -387,26 +424,11 @@ JsonLoader::loadEngineers(
             }
         }
 
-
-        // ----------------------------------------------------
-        // Region
-        // ----------------------------------------------------
-
         engineer.region =
             item.value("region", "");
 
-
-        // ----------------------------------------------------
-        // Home district
-        // ----------------------------------------------------
-
         engineer.homeDistrict =
             item.value("home_district", "");
-
-
-        // ----------------------------------------------------
-        // Served districts
-        // ----------------------------------------------------
 
         if (item.contains("served_districts")) {
 
@@ -423,7 +445,16 @@ JsonLoader::loadEngineers(
         engineers.push_back(
             engineer
         );
-    }
+
+        std::cout
+            << "Engineer "
+            << engineer.id
+            << " start: "
+            << engineer.startLocation.lat
+            << ", "
+            << engineer.startLocation.lon
+            << "\n";
+        }
 
     return engineers;
 }

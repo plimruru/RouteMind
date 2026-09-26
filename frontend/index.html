@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RouteMind — рабочее место диспетчера выездных бригад">
+  <meta name="theme-color" content="#ffd400">
+  <title>RouteMind — маршруты на сегодня</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ffd400'/%3E%3Cpath d='M17 44V19h14c9 0 15 4 15 12 0 6-4 10-10 11l11 2v3H30V34h2c5 0 7-1 7-4 0-3-2-4-7-4h-7v18z' fill='%23111111'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">К рабочей области</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Основная навигация">
+      <a class="brand" href="#" aria-label="RouteMind">
+        <span class="brand-mark" aria-hidden="true"><span>R</span></span>
+        <span class="brand-name">Route<span>Mind</span></span>
+      </a>
+
+      <nav class="main-nav">
+        <button class="nav-item" type="button" data-section="requests" aria-label="Заявки">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8M8 2v4m8-4v4M5 5h14v15H5zM8 10h8M8 14h5"/></svg>
+          <span>Заявки</span>
+        </button>
+        <button class="nav-item active" type="button" data-section="routes" aria-current="page" aria-label="Маршруты">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h2a3 3 0 0 0 3-3V9a3 3 0 0 1 3-3"/></svg>
+          <span>Маршруты</span>
+        </button>
+        <button class="nav-item" type="button" data-section="brigades" aria-label="Бригады">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20a6 6 0 0 1 12 0m0-5a5 5 0 0 1 6 5"/></svg>
+          <span>Бригады</span>
+        </button>
+        <button class="nav-item" type="button" data-section="analytics" aria-label="Аналитика">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></svg>
+          <span>Аналитика</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="nav-item" type="button" aria-label="Настройки">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1z"/></svg>
+          <span>Настройки</span>
+        </button>
+        <div class="user-card">
+          <span class="avatar">АК</span>
+          <span><b>Анна К.</b><small>Диспетчер</small></span>
+          <button type="button" aria-label="Меню профиля">•••</button>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div class="title-group">
+          <div class="eyebrow-row">
+            <span class="eyebrow">Операционный центр · Москва</span>
+          </div>
+          <h1>Маршруты на сегодня</h1>
+          <p id="updatedAt">Последний расчёт: 17 августа, 08:42</p>
+        </div>
+
+        <div class="header-actions">
+          <label class="date-control">
+            <span>Рабочая дата</span>
+            <span class="input-with-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v15H5zM8 2v6m8-6v6M5 10h14"/></svg>
+              <input id="workDate" type="date" value="2026-08-17">
+            </span>
+          </label>
+          <button id="loadBtn" class="button secondary" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 20h14"/></svg>
+            <span>Выгрузить заявки</span>
+          </button>
+          <button id="newRequestBtn" class="button ghost" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            <span>Новая заявка</span>
+          </button>
+          <button id="buildBtn" class="button primary" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18h2a3 3 0 0 0 3-3V9a3 3 0 0 1 3-3h4m-3-3 3 3-3 3"/></svg>
+            <span>Создать маршруты</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="errorBanner" class="error-banner hidden" role="alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5m0 3v.1M4 20h16L12 4z"/></svg>
+        <span id="errorText">Не удалось загрузить данные.</span>
+        <button id="dismissError" type="button" aria-label="Закрыть сообщение">×</button>
+      </div>
+
+      <section class="metrics" aria-label="Сводка за день">
+        <article class="metric-card metric-primary">
+          <div><span>Заявок на день</span><strong id="totalRequests">9</strong></div>
+          <span id="requestsDelta" class="metric-note">7 в маршрутах</span>
+        </article>
+        <article class="metric-card">
+          <div><span>Бригад на смене</span><strong id="totalBrigades">8</strong></div>
+          <span class="metric-note positive">3 задействованы</span>
+        </article>
+        <article class="metric-card">
+          <div><span>Построено маршрутов</span><strong id="totalRoutes">3</strong></div>
+          <span class="metric-note">42,8 км всего</span>
+        </article>
+        <article class="metric-card metric-warning">
+          <div><span>Нужны решения</span><strong id="totalUnassigned">2</strong></div>
+          <span class="metric-note warning">Не распределены</span>
+        </article>
+      </section>
+
+      <section id="workspace" class="workspace" aria-label="Рабочая область маршрутов">
+        <aside class="panel requests-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="section-kicker">Очередь</span>
+              <h2>Заявки</h2>
+            </div>
+            <span id="requestCount" class="count-badge">9</span>
+          </div>
+
+          <div class="search-row">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
+              <input id="requestSearch" type="search" placeholder="Номер или адрес" aria-label="Поиск заявок">
+            </label>
+            <button id="filterToggle" class="icon-button" type="button" aria-label="Показать фильтры" aria-expanded="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10m-7 6h4"/></svg>
+            </button>
+          </div>
+
+          <div id="filterRow" class="filter-row" aria-label="Фильтр статусов">
+            <button class="filter-chip active" data-filter="all" type="button">Все</button>
+            <button class="filter-chip" data-filter="route" type="button">В маршруте</button>
+            <button class="filter-chip" data-filter="unassigned" type="button">Без бригады</button>
+          </div>
+
+          <div id="requestList" class="request-list" aria-live="polite"></div>
+        </aside>
+
+        <section class="map-panel panel" aria-label="Карта маршрута">
+          <div class="map-toolbar">
+            <div class="route-tabs" id="routeTabs" role="tablist" aria-label="Маршруты бригад"></div>
+            <div class="map-actions">
+              <span class="map-legend"><i class="legend-office"></i> Старт <i class="legend-stop"></i> Заявка</span>
+              <button id="fitMapBtn" class="icon-button" type="button" title="Показать весь маршрут" aria-label="Показать весь маршрут">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m13 5h5v-5"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div id="mapStage" class="map-stage">
+            <div id="routeMap" class="route-map" role="application" aria-label="Интерактивная карта выбранного маршрута"></div>
+          </div>
+
+          <div id="mapEmpty" class="map-empty hidden">
+            <span class="empty-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 6 5-3 6 3 5-3v15l-5 3-6-3-5 3zM9 3v15m6-12v15"/></svg>
+            </span>
+            <h3>Маршрут ещё не построен</h3>
+            <p>Загрузите заявки и запустите расчёт.</p>
+          </div>
+        </section>
+
+        <aside class="panel route-panel">
+          <div id="routeDetails"></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <form id="requestForm" class="modal-card">
+      <div class="modal-header">
+        <div><span class="section-kicker">Добавление в очередь</span><h2 id="modalTitle">Новая заявка</h2></div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">×</button>
+      </div>
+
+      <div class="form-grid">
+        <label class="field field-wide"><span>Адрес</span><span class="address-geocoder"><input name="address" autocomplete="street-address" placeholder="Москва, улица, дом" required><button id="geocodeBtn" class="button ghost geocode-button" type="button">Найти координаты</button></span><small id="geocodeStatus" class="geocode-status" aria-live="polite"></small></label>
+        <label class="field"><span>Зона</span>
+          <select name="region" required>
+            <option>Югоцентр</option>
+            <option>Юго-восток</option>
+            <option>Восток</option>
+          </select>
+        </label>
+        <label class="field"><span>Тип работ</span>
+          <select name="bk_type" required>
+            <option>Подключение</option>
+            <option>Локальная заявка</option>
+            <option>Дозаказ</option>
+            <option>Глобальная проблема</option>
+          </select>
+        </label>
+        <label class="field"><span>Навык</span>
+          <select name="required_skill" required>
+            <option>Работы на подключение и дозаказы</option>
+            <option>Локальные работы</option>
+            <option>Аварийные работы</option>
+          </select>
+        </label>
+        <label class="field"><span>Специализация</span>
+          <select name="required_specialization" required>
+            <option value="" selected disabled>Выберите специализацию</option>
+          </select>
+        </label>
+        <label class="field"><span>Район</span><input name="district" placeholder="Например, Даниловский"></label>
+        <label class="field"><span>Начало окна</span><input name="window_start" type="datetime-local" required></label>
+        <label class="field"><span>Конец окна</span><input name="window_end" type="datetime-local" required></label>
+        <label class="field"><span>Транспорт</span>
+          <select name="required_transport">
+            <option value="">Не важен</option>
+            <option>Автомобиль</option>
+            <option>Общественный транспорт</option>
+            <option>Пешеход</option>
+            <option>Велосипед</option>
+          </select>
+        </label>
+        <label class="field"><span>Длительность</span>
+          <select name="duration_minutes">
+            <option value="30">30 минут</option>
+            <option value="60" selected>1 час</option>
+            <option value="90">1,5 часа</option>
+            <option value="120">2 часа</option>
+          </select>
+        </label>
+        <details id="coordinatesDetails" class="coordinates field-wide">
+          <summary>Координаты адреса</summary>
+          <div class="grid2">
+            <label class="field"><span>Широта</span><input name="lat" type="number" step="any" placeholder="55.7558"></label>
+            <label class="field"><span>Долгота</span><input name="lon" type="number" step="any" placeholder="37.6173"></label>
+          </div>
+        </details>
+        <label class="field field-wide"><span>Комментарий</span><textarea name="comment" rows="3" placeholder="Дополнительная информация для бригады"></textarea></label>
+      </div>
+
+      <div class="modal-footer">
+        <span id="modalHint">После создания можно повторно построить маршруты.</span>
+        <div>
+          <button class="button ghost" type="button" data-close-modal>Отмена</button>
+          <button class="button primary" type="submit">Создать заявку</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js?v=8"></script>
+</body>
+</html>

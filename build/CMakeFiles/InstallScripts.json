@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/mendoza/Downloads/LTT/RouteMind-develop/build/cmake_install.cmake",
-		"/home/mendoza/Downloads/LTT/RouteMind-develop/build/_deps/json-build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

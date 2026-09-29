@@ -16,5 +16,23 @@
     "comment": "",
     "lat": 55.7567019,
     "lon": 37.6569978
+  },
+  {
+    "request_id": "99843",
+    "region": "Восток",
+    "district": "Алексеевский район",
+    "address": "Новоалексеевская улица, 16к2",
+    "bk_type": "Локальная заявка",
+    "hd_type": "",
+    "required_skill": "Работы на подключение и дозаказы",
+    "required_specialization": "Авария",
+    "required_transport": "Общественный транспорт",
+    "window_start": "2026-08-17T14:06",
+    "window_end": "2026-08-17T16:00",
+    "duration_minutes": 90,
+    "priority": "Срочная",
+    "comment": "",
+    "lat": 55.8085444,
+    "lon": 37.6477581
   }
 ]

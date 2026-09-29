@@ -15,6 +15,13 @@ public:
         const std::vector<Engineer>& engineers
     );
 
+    // Базовый вариант из ТЗ: входной порядок заявок и первый
+    // подходящий инженер, без ремонта и глобальной оптимизации.
+    Plan solveBaseline(
+        const std::vector<Request>& requests,
+        const std::vector<Engineer>& engineers
+    );
+
     Plan replan(
         const std::vector<Request>& requests,
         const std::vector<Engineer>& engineers,

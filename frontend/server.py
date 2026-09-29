@@ -201,6 +201,7 @@ def create_request(payload):
         "window_start": payload["window_start"],
         "window_end": payload["window_end"],
         "duration_minutes": int(payload.get("duration_minutes", 60)),
+        "priority": payload.get("priority", "Срочная"),
         "comment": payload.get("comment", ""),
     }
 
@@ -319,7 +320,20 @@ def build_plan(requests, brigades):
         plan_path = output / "plan.json"
         if not plan_path.exists():
             raise RuntimeError("Планировщик не создал output/plan.json")
-        return read_json(plan_path, {})
+        plan = read_json(plan_path, {})
+        baseline = subprocess.run(
+            [str(planner), "--baseline"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            timeout=120,
+            check=False,
+        )
+        if baseline.returncode != 0:
+            message = baseline.stderr.strip() or baseline.stdout.strip() or "Базовый расчёт завершился с ошибкой"
+            raise RuntimeError(message[-1200:])
+        plan["baseline"] = read_json(plan_path, {}).get("metrics", {})
+        return plan
 
 
 class RouteMindHandler(SimpleHTTPRequestHandler):

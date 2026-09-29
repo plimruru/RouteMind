@@ -1,4 +1,2293 @@
 {
+    "explanations": [
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "32840"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "78540"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "85188"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "26845"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "93276"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "35265"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "52041"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "60484"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "76173"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "72476"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "7660"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "33880"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "37590"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "75282"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "4724"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "12329"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "20055"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "32589"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "1287"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "31495"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "10135"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "18754"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "82388"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "10245"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "82808"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "98815"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "17892"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "41912"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "68476"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "Missing geolocation"
+            ],
+            "request_id": "24980"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "23637"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "97770"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "52576"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "78036"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "49105"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "26177"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "24132"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "95501"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No engineer satisfies all skill, specialization and transport requirements",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "80308"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "13404"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "65268"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No engineer satisfies all skill, specialization and transport requirements",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "88209"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No engineer satisfies all skill, specialization and transport requirements",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "24482"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No engineer satisfies all skill, specialization and transport requirements",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "7610"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No engineer satisfies all skill, specialization and transport requirements",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "60886"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "7258"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "74198"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "46393"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "84627"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "31260"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "47670"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No engineer satisfies all skill, specialization and transport requirements",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "43506"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "21367"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "57299"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Комарь",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "5406"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Попов",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "48174"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Гусаковский",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "24076"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Брюзгин Ярослав",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "77795"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Исхаков Денис",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "61311"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Брюзгин Ярослав",
+            "reasons": [],
+            "request_id": "13203"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Гусаковский",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "26645"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Горбанев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "2427"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Рыбин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "19216"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Рыбин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "64168"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Белузин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "22634"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Гусаковский",
+            "reasons": [],
+            "request_id": "33527"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Перов",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "47330"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Козырь",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "76678"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Андреев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "46513"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "40919"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Бузань",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "11899"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "98998"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "51774"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "90915"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "45243"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "81698"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "65034"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Бахарев Андрей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "87819"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Макаров",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "75745"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Арташкин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "40111"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Перов",
+            "reasons": [],
+            "request_id": "32807"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Мельников",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "16024"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Переладов Алексей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "17896"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Белоновский",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "63894"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Соколов",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "18023"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Выговский Сергей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "17349"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "54964"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Бузань",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "53552"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Макаров",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "57353"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Бахарев Андрей",
+            "reasons": [],
+            "request_id": "79450"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "76082"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Сакур Тимофей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "79144"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Матвеев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "58129"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Попов",
+            "reasons": [],
+            "request_id": "98182"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Рыбалкин Егор",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "94431"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Зверев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "66944"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Рыбин",
+            "reasons": [],
+            "request_id": "23807"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Каушнян",
+            "reasons": [],
+            "request_id": "62011"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Переладов Алексей",
+            "reasons": [],
+            "request_id": "14494"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "78876"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Брюзгин Ярослав",
+            "reasons": [],
+            "request_id": "74949"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Выговский Сергей",
+            "reasons": [],
+            "request_id": "37272"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Соколов",
+            "reasons": [],
+            "request_id": "34366"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "77563"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Андреев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "11872"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Козырь",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "45778"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Мельников",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "2245"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Сакур Тимофей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "67554"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Матвеев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "78920"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Саламатин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "86002"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Ионов Геннадий",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "60720"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Матвеев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "32066"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Паршин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "94447"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Данилов Даниил",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "876"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "69967"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Капитанчук Александр",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "52405"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Прокопенко Вячеслав",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "79707"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Бахарев Андрей",
+            "reasons": [],
+            "request_id": "6957"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Свеженцев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "20263"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Саламатин",
+            "reasons": [],
+            "request_id": "12263"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Исхаков Денис",
+            "reasons": [],
+            "request_id": "63577"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Ионов Геннадий",
+            "reasons": [],
+            "request_id": "95692"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Белузин",
+            "reasons": [],
+            "request_id": "50219"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "23142"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Царьков",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "65717"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Горбанев",
+            "reasons": [],
+            "request_id": "44117"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Белоновский",
+            "reasons": [],
+            "request_id": "93798"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Паршин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "79719"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Капитанчук Александр",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "55711"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Данилов Даниил",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "93544"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Паршин",
+            "reasons": [],
+            "request_id": "7939"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Арташкин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "23094"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Зверев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "3151"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Рыбалкин Егор",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "76452"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Андреев",
+            "reasons": [],
+            "request_id": "10776"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Переладов Алексей",
+            "reasons": [],
+            "request_id": "19203"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Мельников",
+            "reasons": [],
+            "request_id": "58066"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Бузань",
+            "reasons": [],
+            "request_id": "55454"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "40698"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Арташкин",
+            "reasons": [],
+            "request_id": "46199"
+        },
+        {
+            "assigned": false,
+            "engineer_id": "",
+            "reasons": [
+                "No feasible time slot",
+                "No feasible engineer in current route state"
+            ],
+            "request_id": "93086"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Брюзгин Ярослав",
+            "reasons": [],
+            "request_id": "94409"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Соколов",
+            "reasons": [],
+            "request_id": "53587"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Рыбалкин Егор",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "75881"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Сакур Тимофей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "57866"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Арташкин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "63591"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Макаров",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "89696"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Зверев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "20362"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Демин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "48238"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Прокопенко Вячеслав",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "51133"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Свеженцев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "84074"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Белузин",
+            "reasons": [],
+            "request_id": "48227"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Исхаков Денис",
+            "reasons": [],
+            "request_id": "4893"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "41077"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Выговский Сергей",
+            "reasons": [],
+            "request_id": "23380"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Перов",
+            "reasons": [],
+            "request_id": "29890"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Комарь",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "2915"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Мельников",
+            "reasons": [],
+            "request_id": "3566"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Царьков",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "90373"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Горбанев",
+            "reasons": [],
+            "request_id": "60141"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Белоновский",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "54422"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Белузин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "92031"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Прокопенко Вячеслав",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "76643"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Рыбин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "30243"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Бахарев Андрей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "26896"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Соколов",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "41962"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Выговский Сергей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "97886"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Свеженцев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "15648"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Паршин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "13583"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Капитанчук Александр",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "35057"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Ионов Геннадий",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "73572"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Переладов Алексей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "92618"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Арташкин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "86864"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Данилов Даниил",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "71388"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Царьков",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "30769"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Паршин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "78673"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Капитанчук Александр",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "80548"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Козырь",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "97168"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Макаров",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "89067"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Бузань",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "67472"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Перов",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "14416"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Мельников",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "76944"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Андреев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "47560"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Рыбалкин Егор",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "90989"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Матвеев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "90709"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Зверев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "68359"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Мельников",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "50104"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Саламатин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "19376"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Сакур Тимофей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "66315"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Данилов Даниил",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "68946"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Царьков",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "61540"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Комарь",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "87693"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "35675"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Бузань",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "51603"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Зверев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests"
+            ],
+            "request_id": "66376"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Арташкин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "94575"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Соколов",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Required transport is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "84466"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Андреев",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "33507"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Белоновский",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "99841"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Выговский Сергей",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "36961"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Исхаков Денис",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "51115"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Саламатин",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "27023"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Югоцентр_Капитанчук Александр",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "21571"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Восток_Бригада Перов",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "6185"
+        },
+        {
+            "assigned": true,
+            "engineer_id": "Юго-восток_Бригада Каушнян",
+            "reasons": [
+                "Selected by constrained-first scheduling",
+                "Required skill is available",
+                "Required specialization is available",
+                "Time window is satisfied",
+                "Engineer shift is sufficient",
+                "Engineer selected while preserving flexibility for other requests",
+                "Waiting for request time window"
+            ],
+            "request_id": "86160"
+        }
+    ],
     "metrics": {
         "engineers_used": 35,
         "total_distance_km": 2076.816252712242

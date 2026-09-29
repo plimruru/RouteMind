@@ -700,16 +700,11 @@ bool findBestChain2(
                 ].requestId
             );
 
-            ++targetsChecked;
-
-            std::cout
-                << "\nChain target: "
-                << target->id
-                << "\n";
-
         if (target == nullptr) {
             continue;
         }
+
+        ++targetsChecked;
 
         if (!target->hasLocation) {
             continue;
@@ -1124,58 +1119,6 @@ void Repairer::repair(
             const std::string engineerId =
                 plan.routes[
                     swap.sourceRouteIndex
-                ].engineerId;
-
-            removeFromUnassigned(
-                plan,
-                requestIndex
-            );
-
-            updateExplanation(
-                plan,
-                requestId,
-                engineerId
-            );
-
-            continue;
-        }
-
-
-        // ========================================================
-        // STEP 3
-        // Chain repair depth 2
-        //
-        // A -> Engineer 1
-        // B -> Engineer 2
-        // ========================================================
-
-        ChainCandidate chain;
-
-        if (findBestChain2(
-                plan,
-                requests,
-                engineers,
-                chain)) {
-
-            const int requestIndex =
-                chain.targetUnassignedIndex;
-
-            const std::string requestId =
-                plan.unassigned[
-                    requestIndex
-                ].requestId;
-
-            plan.routes[
-                chain.firstRouteIndex
-            ] = chain.rebuiltFirstRoute;
-
-            plan.routes[
-                chain.secondRouteIndex
-            ] = chain.rebuiltSecondRoute;
-
-            const std::string engineerId =
-                plan.routes[
-                    chain.firstRouteIndex
                 ].engineerId;
 
             removeFromUnassigned(

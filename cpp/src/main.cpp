@@ -1,188 +1,31 @@
 #include <iostream>
-#include <map>
-#include <algorithm>
-
 #include "planner/Planner.h"
-#include "planner/Scheduler.h"
-#include "routing/Router.h"
 #include "io/JsonLoader.h"
 #include "io/JsonWriter.h"
 
-int main() {
+int main(int argc, char* argv[]) {
 
     try {
-
-        std::cout << "Starting planner...\n";
 
         auto requests =
             JsonLoader::loadRequests(
                 "data/requests.json"
             );
 
-        std::cout
-            << "Loaded requests: "
-            << requests.size()
-            << "\n";
-
-        if (!requests.empty()) {
-
-            std::cout
-                << "First request location: "
-                << requests.front().location.lat
-                << ", "
-                << requests.front().location.lon
-                << "\n";
-        }
-
         auto engineers =
             JsonLoader::loadEngineers(
                 "data/brigades.json"
             );
 
-        std::cout
-            << "Loaded engineers: "
-            << engineers.size()
-            << "\n";
-
-
         Planner planner;
 
-        Plan plan =
-            planner.solve(
-                requests,
-                engineers
-            );
-
-        {
-        Scheduler scheduler;
-        Router router;
-
-        std::cout << "\n=== Final time-failure diagnostics ===\n";
-
-        for (const auto& unassigned : plan.unassigned) {
-            if (
-                unassigned.reason !=
-                "No feasible time slot"
-            ) {
-                continue;
-            }
-
-            auto requestIt = std::find_if(
-                requests.begin(),
-                requests.end(),
-                [&](const Request& request) {
-                    return request.id == unassigned.requestId;
-                }
-            );
-
-            if (requestIt == requests.end()) {
-                continue;
-            }
-
-            const Request& request = *requestIt;
-
-            int compatibleEngineers = 0;
-            int freshFeasibleEngineers = 0;
-
-            std::string firstFailureReason;
-
-            for (const auto& engineer : engineers) {
-                const bool skillOk =
-                    std::find(
-                        engineer.skills.begin(),
-                        engineer.skills.end(),
-                        request.requiredSkill
-                    ) != engineer.skills.end();
-
-                const bool specializationOk =
-                    request.requiredSpecialization.empty() ||
-                    std::find(
-                        engineer.specializations.begin(),
-                        engineer.specializations.end(),
-                        request.requiredSpecialization
-                    ) != engineer.specializations.end();
-
-                const bool transportOk =
-                    !request.requiredTransport.has_value() ||
-                    engineer.transport ==
-                        *request.requiredTransport;
-
-                if (
-                    !skillOk ||
-                    !specializationOk ||
-                    !transportOk
-                ) {
-                    continue;
-                }
-
-                ++compatibleEngineers;
-
-                const ScheduleResult result =
-                    scheduler.schedule(
-                        engineer.startLocation,
-                        engineer,
-                        request,
-                        engineer.shiftStart,
-                        router
-                    );
-
-                if (result.feasible) {
-                    ++freshFeasibleEngineers;
-                } else if (firstFailureReason.empty()) {
-                    firstFailureReason =
-                        result.reason;
-                }
-            }
-
-            std::cout
-                << "\nRequest: "
-                << request.id
-                << "\n";
-
-            std::cout
-                << "  Window: "
-                << request.windowStart
-                << "-"
-                << request.windowEnd
-                << "\n";
-
-            std::cout
-                << "  Duration: "
-                << request.durationMinutes
-                << " min\n";
-
-            std::cout
-                << "  Compatible engineers: "
-                << compatibleEngineers
-                << "\n";
-
-            std::cout
-                << "  Fresh feasible engineers: "
-                << freshFeasibleEngineers
-                << "\n";
-
-            if (!firstFailureReason.empty()) {
-                std::cout
-                    << "  Example failure: "
-                    << firstFailureReason
-                    << "\n";
-            }
-
-            if (freshFeasibleEngineers > 0) {
-                std::cout
-                    << "  CLASSIFICATION: "
-                    << "POTENTIALLY RECOVERABLE\n";
-            } else {
-                std::cout
-                    << "  CLASSIFICATION: "
-                    << "INTRINSICALLY TIME-INFEASIBLE\n";
-            }
-        }
-    }
-
+        const bool baseline = argc > 1 && std::string(argv[1]) == "--baseline";
+        Plan plan = baseline
+            ? planner.solveBaseline(requests, engineers)
+            : planner.solve(requests, engineers);
 
         std::cout
-            << "\nPlan created.\n";
+            << "Plan created.\n";
 
         std::cout
             << "Routes: "
@@ -213,18 +56,6 @@ int main() {
             << "\nExplanations: "
             << plan.explanations.size()
             << "\n";
-
-        std::map<std::string, int> reasonCounts;
-
-        for (const auto& item : plan.unassigned) {
-            ++reasonCounts[item.reason];
-        }
-
-        std::cout << "\nUnassigned reasons:\n";
-
-        for (const auto& [reason, count] : reasonCounts) {
-            std::cout << count << " " << reason << "\n";
-        }
 
         JsonWriter::writePlan(
             plan,

@@ -5,6 +5,10 @@ const state = {
   brigades: [],
   routes: [],
   unassigned: [],
+  explanations: new Map(),
+  metrics: {},
+  baseline: {},
+  replanSummary: "",
   selectedBrigadeId: null,
   filter: "all",
   query: "",
@@ -160,7 +164,11 @@ function normalizePlan(raw) {
     request_id: String(item.request_id ?? item.id),
     reason: item.reason || "Причина не указана"
   }));
-  return { routes, unassigned, metrics: source.metrics || {} };
+  const explanations = new Map((source.explanations || []).map((item) => [
+    String(item.request_id ?? item.id),
+    Array.isArray(item.reasons) ? item.reasons : []
+  ]));
+  return { routes, unassigned, explanations, metrics: source.metrics || {}, baseline: source.baseline || {} };
 }
 
 function renderSpecializationOptions() {
@@ -187,6 +195,9 @@ function applyPlan(rawPlan) {
   const reasons = new Map(plan.unassigned.map((item) => [item.request_id, item.reason]));
   state.routes = plan.routes;
   state.unassigned = plan.unassigned;
+  state.explanations = plan.explanations;
+  state.metrics = plan.metrics;
+  state.baseline = plan.baseline;
   state.requests = state.requests.map((request) => {
     const id = String(request.request_id);
     if (assigned.has(id)) return { ...request, status: "route", brigade_id: assigned.get(id), reason: null };
@@ -206,6 +217,7 @@ function renderMetrics() {
   const routed = state.requests.filter((request) => request.status === "route" || request.status === "in_work").length;
   const used = new Set(state.routes.map((route) => route.brigade_id)).size;
   const distance = state.routes.reduce((sum, route) => sum + route.total_distance_km, 0);
+  const baselineDistance = Number(state.baseline.total_distance_km);
   $("totalRequests").textContent = state.requests.length;
   $("totalBrigades").textContent = state.brigades.length;
   $("totalRoutes").textContent = state.routes.length;
@@ -214,6 +226,10 @@ function renderMetrics() {
   const notes = document.querySelectorAll(".metric-note");
   if (notes[1]) notes[1].textContent = `${used} задействованы`;
   if (notes[2]) notes[2].textContent = `${distance.toLocaleString("ru-RU", { maximumFractionDigits: 1 })} км всего`;
+  if (notes[3] && Number.isFinite(baselineDistance)) {
+    const delta = baselineDistance - distance;
+    notes[3].textContent = delta > 0 ? `На ${delta.toLocaleString("ru-RU", { maximumFractionDigits: 1 })} км короче базового` : "Сравнение с базовым планом";
+  }
 }
 
 function renderRequests() {
@@ -400,7 +416,7 @@ function renderRouteDetails() {
   </div>
   <div class="route-section"><h3 class="route-section-title">Порядок объезда <span>${requests.length} ${pluralizeRequests(requests.length)}</span></h3><div class="timeline">
     <div class="timeline-stop"><span class="stop-marker office">S</span><span class="stop-copy"><strong>Стартовая точка</strong><small>${escapeHtml(brigade.start_address || "Офис")}</small></span><span class="stop-time">${escapeHtml(brigade.shift_start)}</span></div>
-    ${requests.map((request, index) => { const stop = stops.get(String(request.request_id)) || {}; return `<div class="timeline-stop"><span class="stop-marker">${index + 1}</span><span class="stop-copy"><strong>#${escapeHtml(request.request_id)} · ${escapeHtml(request.district || request.bk_type || "Заявка")}</strong><small>${escapeHtml(request.address || "Адрес не указан")}</small></span><span class="stop-time">${formatTime(stop.start_time ?? request.window_start)}</span></div>`; }).join("")}
+    ${requests.map((request, index) => { const stop = stops.get(String(request.request_id)) || {}; const reasons = state.explanations.get(String(request.request_id)) || []; return `<div class="timeline-stop"><span class="stop-marker">${index + 1}</span><span class="stop-copy"><strong>#${escapeHtml(request.request_id)} · ${escapeHtml(request.district || request.bk_type || "Заявка")}</strong><small>${escapeHtml(request.address || "Адрес не указан")}</small>${reasons.length ? `<small>${escapeHtml(reasons.map(translateReason).join(" · "))}</small>` : ""}</span><span class="stop-time">${formatTime(stop.start_time ?? request.window_start)}</span></div>`; }).join("")}
   </div></div>
   ${state.unassigned.length ? `<div class="route-section"><h3 class="route-section-title">Требуют решения <span>${state.unassigned.length}</span></h3><div class="unassigned-list">${state.unassigned.map((item) => `<div class="unassigned-item"><div><strong>#${escapeHtml(item.request_id)}</strong><span>Без бригады</span></div><p>${escapeHtml(translateReason(item.reason))}</p></div>`).join("")}</div></div>` : ""}`;
 }
@@ -449,6 +465,10 @@ async function loadDailyRequests(date = $("workDate").value) {
     renderSpecializationOptions();
     state.routes = [];
     state.unassigned = [];
+    state.explanations = new Map();
+    state.metrics = {};
+    state.baseline = {};
+    state.replanSummary = "";
     state.selectedBrigadeId = null;
     showToast(state.requests.length ? `Загружено ${state.requests.length} заявок` : "На выбранную дату заявок нет");
   } catch (error) {
@@ -473,14 +493,17 @@ async function buildRoutes() {
   label.textContent = "Считаем…";
   clearError();
   try {
+    const previousAssignments = new Map(state.requests.map((request) => [String(request.request_id), String(request.brigade_id || "")]));
     const plan = await apiRequest("/api/routes/build", {
       method: "POST",
       body: JSON.stringify({ date: $("workDate").value, requests: state.requests, brigades: state.brigades })
     });
     applyPlan(plan);
+    const changed = state.requests.filter((request) => previousAssignments.has(String(request.request_id)) && previousAssignments.get(String(request.request_id)) !== String(request.brigade_id || "")).length;
+    state.replanSummary = changed ? `После перепланирования изменены назначения: ${changed}.` : "После перепланирования назначения сохранены.";
     $("updatedAt").textContent = `Последний расчёт: ${new Date().toLocaleString("ru-RU", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })}`;
     renderAll();
-    showToast(`Готово: ${state.routes.length} маршрутов, ${state.unassigned.length} без бригады`);
+    showToast(`Готово: ${state.routes.length} маршрутов, ${state.unassigned.length} без бригады. ${state.replanSummary}`);
   } catch (error) {
     showError(`Не удалось построить маршруты: ${error.message}`);
   } finally {
@@ -572,9 +595,6 @@ async function createRequest(event) {
     payload.required_transport ||= null;
     const saved = normalizeRequest(await apiRequest("/api/requests", { method: "POST", body: JSON.stringify(payload) }));
     state.requests.unshift(saved);
-    state.routes = [];
-    state.unassigned = [];
-    state.selectedBrigadeId = null;
     form.reset();
     closeModal();
     renderAll();

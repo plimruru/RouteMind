@@ -14,14 +14,19 @@ namespace {
 
 int parseTime(const std::string& value)
 {
-    // Формат:
-    // 2026-08-17T18:00:00
+    // Поддерживаем как ISO datetime, так и HH:MM из пользовательского JSON.
+    const std::size_t separator = value.find('T');
+    const std::size_t offset = separator == std::string::npos ? 0 : separator + 1;
+    if (value.size() < offset + 5 || value[offset + 2] != ':') {
+        throw std::runtime_error("Invalid time value: " + value);
+    }
 
-    int hour =
-        std::stoi(value.substr(11, 2));
+    int hour = std::stoi(value.substr(offset, 2));
+    int minute = std::stoi(value.substr(offset + 3, 2));
 
-    int minute =
-        std::stoi(value.substr(14, 2));
+    if (hour < 0 || hour > 23 || minute < 0 || minute > 59) {
+        throw std::runtime_error("Invalid time value: " + value);
+    }
 
     return hour * 60 + minute;
 }
@@ -225,7 +230,10 @@ JsonLoader::loadRequests(
         // Длительность
         // ----------------------------------------------------
 
-        request.durationMinutes = 60;
+        request.durationMinutes = item.value("duration_minutes", 60);
+        if (request.durationMinutes <= 0) {
+            throw std::runtime_error("Request duration must be positive: " + request.id);
+        }
 
 
         // ----------------------------------------------------
@@ -249,8 +257,9 @@ JsonLoader::loadRequests(
         // Priority
         // ----------------------------------------------------
 
-        request.priority =
-            Priority::Normal;
+        request.priority = item.value("priority", "Обычная") == "Срочная"
+            ? Priority::Urgent
+            : Priority::Normal;
 
 
         // ----------------------------------------------------
@@ -391,11 +400,11 @@ JsonLoader::loadEngineers(
                 << "\n";
         }
 
-        engineer.shiftStart =
-            8 * 60;
-
-        engineer.shiftEnd =
-            20 * 60;
+        engineer.shiftStart = parseTime(item.value("shift_start", "08:00"));
+        engineer.shiftEnd = parseTime(item.value("shift_end", "20:00"));
+        if (engineer.shiftEnd <= engineer.shiftStart) {
+            throw std::runtime_error("Invalid shift for engineer: " + engineer.id);
+        }
 
         engineer.transport =
             parseTransport(

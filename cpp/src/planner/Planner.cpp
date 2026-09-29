@@ -546,6 +546,15 @@ Plan Planner::solve(
                 continue;
             }
 
+            // При перепланировании срочные заявки обслуживаются раньше
+            // остальных, если число доступных исполнителей одинаково.
+            if (currentRequest.priority != bestRequest.priority) {
+                if (currentRequest.priority == Priority::Urgent) {
+                    bestEvaluatedIndex = i;
+                }
+                continue;
+            }
+
             /*
              * При одинаковом числе кандидатов
              * сначала обрабатываем более узкое окно.
@@ -772,6 +781,7 @@ Plan Planner::replan(
     const Event& event
 ) {
     std::vector<Request> updatedRequests = requests;
+    std::vector<Engineer> updatedEngineers = engineers;
 
     if (event.type == EventType::UrgentRequest) {
         if (event.newRequest.has_value()) {
@@ -796,8 +806,63 @@ Plan Planner::replan(
         }
     }
 
+    else if (event.type == EventType::EngineerUnavailable) {
+        if (event.engineerId.has_value()) {
+            updatedEngineers.erase(
+                std::remove_if(
+                    updatedEngineers.begin(),
+                    updatedEngineers.end(),
+                    [&](const Engineer& engineer) {
+                        return engineer.id == event.engineerId.value();
+                    }
+                ),
+                updatedEngineers.end()
+            );
+        }
+    }
+
     return solve(
         updatedRequests,
-        engineers
+        updatedEngineers
     );
+}
+
+Plan Planner::solveBaseline(
+    const std::vector<Request>& requests,
+    const std::vector<Engineer>& engineers
+) {
+    Plan plan;
+    std::vector<WorkingRoute> routes;
+    routes.reserve(engineers.size());
+    for (const auto& engineer : engineers) {
+        routes.push_back({&engineer, engineer.startLocation, engineer.shiftStart});
+    }
+
+    Router router;
+    Scheduler scheduler;
+    for (const auto& request : requests) {
+        if (!request.hasLocation) {
+            plan.unassigned.push_back({request.id, "Missing geolocation"});
+            continue;
+        }
+        const auto candidates = findCandidates(request, routes, router, scheduler);
+        if (candidates.empty()) {
+            plan.unassigned.push_back({request.id, unassignedReason(request, engineers)});
+            continue;
+        }
+        // findCandidates сохраняет порядок бригад во входном наборе.
+        assignRequest(request, routes[candidates.front().routeIndex], candidates.front().schedule);
+    }
+
+    for (const auto& working : routes) {
+        if (working.requests.empty()) continue;
+        Route route;
+        route.engineerId = working.engineer->id;
+        route.requests = working.requests;
+        route.totalDistanceKm = working.totalDistanceKm;
+        route.totalTravelMinutes = working.totalTravelMinutes;
+        plan.routes.push_back(route);
+    }
+    calculateMetrics(plan);
+    return plan;
 }

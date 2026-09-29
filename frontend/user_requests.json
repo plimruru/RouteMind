@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "request_id": "99842",
+    "region": "Восток",
+    "district": "Бауманка",
+    "address": "Москва, земляной вал 3",
+    "bk_type": "Подключение",
+    "hd_type": "",
+    "required_skill": "Работы на подключение и дозаказы",
+    "required_specialization": "Заказ подключения/Дозаказ оборудования",
+    "required_transport": null,
+    "window_start": "2026-08-17T09:00",
+    "window_end": "2026-08-17T11:00",
+    "duration_minutes": 60,
+    "priority": "Срочная",
+    "comment": "",
+    "lat": 55.7567019,
+    "lon": 37.6569978
+  }
+]

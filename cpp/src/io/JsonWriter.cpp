@@ -16,6 +16,7 @@ void JsonWriter::writePlan(
 
     output["routes"] = json::array();
     output["unassigned"] = json::array();
+    output["explanations"] = json::array();
 
     for (const auto& route : plan.routes) {
         json routeJson;
@@ -59,6 +60,15 @@ void JsonWriter::writePlan(
         output["routes"].push_back(
             routeJson
         );
+    }
+
+    for (const auto& explanation : plan.explanations) {
+        output["explanations"].push_back({
+            {"request_id", explanation.requestId},
+            {"assigned", explanation.assigned},
+            {"engineer_id", explanation.engineerId},
+            {"reasons", explanation.reasons}
+        });
     }
 
     for (const auto& request :
